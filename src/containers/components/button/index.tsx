@@ -32,10 +32,7 @@ export default function ButtonComponent(props: IProps) {
           />
         ) : null}
         <Text style={[styles.btnText, {color: props.clear ? colors.darkGray : colors.white}, props.styleText]}>
-          {props.text}{' '}
-          {props.disabled === true ? (
-            <ActivityIndicator color={colors.white} style={{backgroundColor: colors.silverTree}} />
-          ) : null}
+          {props.text}
         </Text>
       </TouchableOpacity>
     </View>

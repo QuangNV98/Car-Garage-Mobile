@@ -7,6 +7,7 @@ import inviteFriendSaga from './myCommitment/addCommitment/contracts/redux/opera
 import myCommitmentSaga from './myCommitment/index.sagas';
 import myProfileSaga from './myProfile/index.sagas';
 import notificationSaga from './notifications/redux/operations';
+import transSaga from './myFriends/redux/operations';
 
 export default {
   ...loginSaga,
@@ -18,4 +19,5 @@ export default {
   ...myProfileSaga,
   ...createNewPasswordSaga,
   ...notificationSaga,
+  ...transSaga
 };

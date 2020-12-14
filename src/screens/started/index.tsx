@@ -45,7 +45,7 @@ class StartedScreen extends React.Component<IProps> {
   render() {
     const {activeSlide} = this.state;
     return (
-      <Layout>
+      <>
         <GestureRecognizer
           style={{
             flex: 1,
@@ -151,7 +151,7 @@ class StartedScreen extends React.Component<IProps> {
             )}
           </View>
         </GestureRecognizer>
-      </Layout>
+      </>
     );
   }
 }

@@ -42,6 +42,8 @@ import {APP_ADD_COMMITMENT_MAP_CHECKIN} from './screens/myCommitment/mapCheckin/
 import {APP_MY_COMMITMENT_SCREEN} from './screens/myCommitment/navigation';
 import MyFriendScreen from './screens/myFriends';
 import {APP_MY_FRIEND_SCREEN} from './screens/myFriends/navigation';
+import DetailBill from './screens/myFriends/detailBill/index';
+import {APP_DETAIL_BILL_SCREEN} from './screens/myFriends/detailBill/navigation';
 import MyProfileScreen from './screens/myProfile';
 import {AccountSettingComponent, MY_PROFILE_ACCOUNT_SETTINGS_SCREEN} from './screens/myProfile/accountSettings';
 import {InviteFriendComponent, MY_PROFILE_INVITE_FRIEND_SCREEN} from './screens/myProfile/inviteFriends';
@@ -105,6 +107,7 @@ Screens.set(APP_ADD_COMMITMENT_CONTRACT_SCREEN, AddCommitmentContractComponent);
 Screens.set(APP_ADD_COMMITMENT_BILLING_SCREEN, AddCommitmentBillingComponent);
 Screens.set(APP_ADD_COMMITMENT_FINISH_SCREEN, AddCommitmentFinishComponent);
 Screens.set(APP_MY_FRIEND_SCREEN, MyFriendScreen);
+Screens.set(APP_DETAIL_BILL_SCREEN, DetailBill);
 Screens.set(APP_PROFILE_SCREEN, MyProfileScreen);
 Screens.set(APP_NOTIFICATION_SCREEN, NotificationScreen);
 Screens.set(APP_ADD_COMMITMENT_STANDART_COMMITMENT_SCREEN, StandartCommitmentComponent);

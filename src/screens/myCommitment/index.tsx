@@ -6,131 +6,68 @@ import BottomTabNavigation from '@src/containers/components/bottomNavigation';
 import Layout from '@src/containers/components/layout';
 import {saveCommitmentStatusAction} from '@src/containers/redux/common/actions';
 import {colors, common} from '@src/styles';
-import React, {FC, useEffect} from 'react';
-import {Alert, Image, Text, TouchableOpacity, View} from 'react-native';
+import React, {FC, useEffect, useState} from 'react';
+import {Alert, Image, Text, TouchableOpacity, View, Modal} from 'react-native';
 import {Icon} from 'react-native-elements';
 import ModalDropdown from 'react-native-modal-dropdown';
 import {useDispatch, useSelector} from 'react-redux';
 import {rootProfileScreen} from '../myProfile/navigation';
 import {ListCommitmentComponent} from './listCommitments';
 import {APP_MY_COMMITMENT_SCREEN} from './navigation';
-import {IProps} from './propState';
+import {IProps, IState} from './propState';
 import {getListCommitmentAction} from './redux/actions';
 import {addCommitmentStartRunningScreen} from './startRunning/navigation';
 import styles from './styles';
+import {logOutAction} from '@src/containers/redux/common/actions';
+import {rootLoginScreen} from '@src/screens/accounts/signin/navigation';
+import ButtonComponent from '@src/containers/components/button';
+import IconE from 'react-native-vector-icons/FontAwesome5';
 
 export const MyCommitmentComponent: FC<IProps> = (props: IProps) => {
   const dispatch = useDispatch();
 
-  props = useSelector<RootState, IProps>((state: RootState) => ({
+  props = useSelector<RootState, IProps>((state: any) => ({
     ...props,
-    avatar_img: state.account.avatar,
-    fullname: `${state.account.first_name}`,
-    countActive: state.screens.myCommitments.list.countActive,
-    countFinish: state.screens.myCommitments.list.countFinish,
-    status_id: state.common.status.status_id,
-    status_name: state.common.status.status_name,
-    getListCommitmentAction: (pageNumber: number, status: string) =>
-      dispatch(getListCommitmentAction(pageNumber, status)),
-    saveCommitmentStatusAction: (status) => dispatch(saveCommitmentStatusAction(status)),
+    account: state.account,
+    logOutAction: () => dispatch(logOutAction()),
   }));
+  const [state, setState] = useState<any>({
+    showConfirmLogout: false,
+    user: null
+  });
+
+  const _signout = () => {
+    setState((state: IState) => ({...state, showConfirmLogout: !state.showConfirmLogout}));
+    props.logOutAction();
+    rootLoginScreen();
+  };
+
+  const _toggleModalLogout = () => {
+    setState((state: IState) => ({...state, showConfirmLogout: !state.showConfirmLogout}));
+  };
 
   useEffect(() => {
-    AsyncStorage.getItem(System.BACKGROUND_TIMER).then((res) => {
-      const backgroundTimer = JSON.parse(res);
-      if (backgroundTimer) {
-        const item = backgroundTimer.item;
-        if (item) {
-          Alert.alert('Warning', 'There is a timer running. Please finish it before starting a new timer', [
-            {
-              text: 'OK',
-              onPress: () => addCommitmentStartRunningScreen(props.componentId, {item}),
-            },
-          ]);
-        }
-      }
-    });
+    getToken()
   }, []);
 
-  const goToAccountSettings = () => rootProfileScreen();
-
-  const _goalOnValueChange = (value: number) => {
-    if (parseInt(value.toString()) === 0)
-      props.saveCommitmentStatusAction({status_name: 'ACTIVE', status_id: 1, loading: true});
-    else if (parseInt(value.toString()) === 1)
-      props.saveCommitmentStatusAction({status_name: 'FINISH', status_id: 2, loading: true});
-    else if (parseInt(value.toString()) === 2)
-      props.saveCommitmentStatusAction({status_name: 'FAIL', status_id: 3, loading: true});
-  };
-
-  const renderSelect = (index, sectionID, rowID, highlightRow) => {
-    console.log(sectionID, 'sectionID');
-    console.log(rowID, 'rowID');
-    console.log(highlightRow, 'highlightRow');
-    return (
-      <View style={styles.itemSelect}>
-        <Text style={styles.textSelect}>{index}</Text>
-        {/* if active will show Icon */}
-        <Icon name="left" type="antdesign" color="white" containerStyle={styles.iconSelect} size={18} />
-      </View>
-    );
-  };
-  const renderSeparator = () => {
-    return false;
-  };
+  const getToken = async () => {
+    const user = await AsyncStorage.getItem(System.USER_INFO);
+    setState((state: IState) => ({...state, user}));
+  }
 
   return (
-    <Layout>
+    <>
       <View style={[common.container, common.flex_0]} accessibilityLabel="commitment-tab-content">
         <View style={styles.header}>
           <View>
             <Text style={styles.name}>Hello,</Text>
-            <Image style={styles.titleImage} source={require('@src/assets/images/Rectangle_26.png')} />
-
             <View style={[common.flexRow, common.alignItemsCenter]}>
-              <Text style={styles.name}>{props.fullname}!</Text>
+              <Text style={styles.name}>{JSON.parse(state.user)?.NAME}!</Text>
             </View>
           </View>
-          <TouchableOpacity onPress={goToAccountSettings}>
-            <Image
-              style={styles.avatar}
-              source={
-                props.avatar_img
-                  ? {uri: `${config.HOST_API}/${props.avatar_img}`}
-                  : require('@src/assets/images/avatarDefault.png')
-              }
-            />
+          <TouchableOpacity onPress={_toggleModalLogout}>
+            <Icon name="sign-out" type="font-awesome" color={colors.silverTree} size={30} />
           </TouchableOpacity>
-        </View>
-        <View style={styles.item}>
-          <View style={styles.itemLeft}>
-            <Text style={styles.itemSubtext}>Active {props.countActive !== 1 ? 'Pledges' : 'Pledge'}</Text>
-            <Text style={styles.numberCount}>{props.countActive}</Text>
-          </View>
-          <View style={styles.itemRight}>
-            <Text style={styles.itemSubtext}>Honored {props.countFinish !== 1 ? 'Pledges' : 'Pledge'}</Text>
-            <Text style={styles.numberCount}>{props.countFinish}</Text>
-          </View>
-        </View>
-        <View style={styles.wrapListTitle}>
-          <Text style={styles.listTitle}>Pledges</Text>
-          <View style={[common.flexRow, common.alignItemsCenter, common.pr10]}>
-            <ModalDropdown
-              style={styles.selectWrap}
-              textStyle={styles.selectText}
-              dropdownStyle={styles.selectDropdown}
-              dropdownTextStyle={styles.dropdownTextStyle}
-              options={['Active', 'Honored', 'Dishonored']}
-              renderRow={renderSelect}
-              // accessible={false}
-              renderSeparator={renderSeparator}
-              defaultValue={
-                props.status_name === 'FINISH' ? 'Honored' : props.status_name === 'FAIL' ? 'Dishonored' : 'Active'
-              }
-              onSelect={_goalOnValueChange}
-            />
-            <Icon name="down" type="antdesign" color={colors.silverTree} size={18} />
-          </View>
         </View>
       </View>
       <ListCommitmentComponent componentId={props.componentId} />
@@ -139,6 +76,33 @@ export const MyCommitmentComponent: FC<IProps> = (props: IProps) => {
         activeTab={APP_MY_COMMITMENT_SCREEN}
         showAddCommitments={true}
       />
-    </Layout>
+      <Modal animationType="fade" transparent={true} visible={state.showConfirmLogout}>
+        <View style={styles.modalContainer}>
+          <View style={styles.modalContent}>
+            <TouchableOpacity style={styles.modalBtnClose} onPress={_toggleModalLogout}>
+              <IconE name="times" size={20} color={colors.manatee} />
+            </TouchableOpacity>
+            {/* <Text style={styles.modalTile}>Are you sure you</Text>
+            <Text style={styles.modalTile}>want to log out?</Text> */}
+            <View style={styles.modalGroupButton}>
+              <ButtonComponent
+                styleContainer={{width: 114}}
+                styleButton={{backgroundColor: 'transparent', borderColor: colors.manatee}}
+                styleText={{fontSize: 13, color: colors.manatee}}
+                text="Cancel"
+                onPress={_toggleModalLogout}
+              />
+              <ButtonComponent
+                styleContainer={{width: 114}}
+                styleButton={{backgroundColor: colors.red, borderColor: 'transparent'}}
+                styleText={{fontSize: 13}}
+                text="Log Out"
+                onPress={_signout}
+              />
+            </View>
+          </View>
+        </View>
+      </Modal>
+    </>
   );
 };

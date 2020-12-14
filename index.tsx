@@ -30,22 +30,21 @@ Navigation.events().registerAppLaunchedListener(() => {
           payload: isConnected,
         });
 
-        const checkPassStarted = await AsyncStorage.getItem(System.PASS_STARTED);
-        const account = store.getState().account;
-        if (checkPassStarted !== 'passed') {
-          rootStartedScreen();
-        } else if (account.id) {
-          const account = await getAccountInfor();
-          console.log(account, 'account');
-          if (account) {
-            await store.dispatch(setAccountAction(account));
+        const token = await AsyncStorage.getItem(System.TOKEN);
+        // const account = store.getState().account;
+        // if (checkPassStarted !== 'passed') {
+        //   rootStartedScreen();
+        // } else if (account.id) {
+        //   console.log(account, 'account');
+          if (token) {
             rootMyCommitmentScreen();
           } else {
             rootLoginScreen();
           }
-        } else {
-          rootLoginScreen();
-        }
+        //   }
+        // } else {
+          // rootLoginScreen();
+        // }
       } catch (error) {
         await store.dispatch(logOutAction());
         rootLoginScreen();

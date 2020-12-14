@@ -1,4 +1,4 @@
-package com.accountabuilder;
+package com.cargarage;
 
 import com.reactnativenavigation.NavigationActivity;
 

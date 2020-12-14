@@ -1,5 +1,5 @@
 apply plugin: "com.android.application"
-
+apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
 import com.android.build.OutputFile
 
 /**
@@ -128,11 +128,12 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.accountabuilder"
+        applicationId "com.cargarage"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
     }
     splits {
         abi {
@@ -179,9 +180,6 @@ android {
 }
 
 dependencies {
-    implementation project(':appcenter-crashes')
-    implementation project(':appcenter-analytics')
-    implementation project(':appcenter')
     implementation project(':react-native-config')
     implementation project(':react-native-vector-icons')
     implementation project(':react-native-navigation')

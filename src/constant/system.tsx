@@ -109,6 +109,8 @@ const COMMITMENT_STATUS = [
   },
 ];
 
+const USER_INFO = 'user_info'
+
 export default {
   TOKEN,
   RESPONSE_STATUS,
@@ -127,4 +129,5 @@ export default {
   COMMITMENT_STATUS,
   DATA_UNIT,
   FCM_TOKEN,
+  USER_INFO
 };

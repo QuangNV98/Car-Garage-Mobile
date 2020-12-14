@@ -1,20 +1,21 @@
 import {RootState} from '@src/boot/rootReducers';
 import {addCommitmentChooseGoalScreen} from '@src/screens/myCommitment/addCommitment/chooseGoal/navigation';
 import {APP_MY_COMMITMENT_SCREEN, rootMyCommitmentScreen} from '@src/screens/myCommitment/navigation';
-import {APP_MY_FRIEND_SCREEN} from '@src/screens/myFriends/navigation';
 import {APP_PROFILE_SCREEN, rootProfileScreen} from '@src/screens/myProfile/navigation';
 import {APP_NOTIFICATION_SCREEN, rootNotificationScreen} from '@src/screens/notifications/navigation';
+import {APP_MY_FRIEND_SCREEN, rootMyFriendScreen} from '@src/screens/myFriends/navigation';
 import {colors} from '@src/styles';
 import {ms} from '@src/styles/scalingUtils';
 import React, {Fragment, useState} from 'react';
 import {Alert, TouchableOpacity, Modal, Text, View} from 'react-native';
 import BottomNavigation, {FullTab} from 'react-native-material-bottom-navigation';
-import Icon from 'react-native-vector-icons/Ionicons';
+import {Icon} from 'react-native-elements';
 import {useSelector} from 'react-redux';
 import {IProps, IState} from './propState';
 import styles from './styles';
 import ButtonComponent from '@src/containers/components/button';
 import {myProfileUpdatePaymentScreen} from '@src/screens/myProfile/payment/updatePayment';
+import {location, permission} from '@src/utils/index';
 
 export default function BottomTabNavigation(props: IProps) {
   props = useSelector<RootState, IProps>((state: RootState) => ({
@@ -29,34 +30,32 @@ export default function BottomTabNavigation(props: IProps) {
   const _tabs = [
     {
       key: APP_MY_COMMITMENT_SCREEN,
-      label: 'Pledges',
+      label: 'Dashboard',
       barColor: colors.white,
-      img: 'ios-list',
+      img: 'home',
       onPress: () => rootMyCommitmentScreen(),
     },
     {
       key: APP_MY_FRIEND_SCREEN,
-      label: 'Friends',
+      label: 'Transaction',
       barColor: colors.white,
-      img: 'ios-star',
-      onPress: () =>
-        Alert.alert(
-          'Warning',
-          'The function is in development process. We will soon release. Thank you for your interest :)',
-        ),
+      img: 'list',
+      onPress: () => rootMyFriendScreen(),
     },
     {
       key: APP_PROFILE_SCREEN,
-      label: 'Account',
+      label: 'S.O.S',
       barColor: colors.white,
-      img: 'ios-person',
-      onPress: () => rootProfileScreen(),
+      img: 'shield',
+      onPress: async() => {
+        rootProfileScreen()
+      },
     },
     {
       key: APP_NOTIFICATION_SCREEN,
       label: 'Notifications',
       barColor: colors.white,
-      img: 'ios-notifications',
+      img: 'bell',
       onPress: () => rootNotificationScreen(),
     },
   ];
@@ -84,7 +83,7 @@ export default function BottomTabNavigation(props: IProps) {
   const _handleTabPress = (newTab: any) => newTab.onPress();
 
   const _renderIcon = (tab: any) => ({isActive}) => (
-    <Icon name={tab.img} size={ms(30)} color={isActive ? colors.silverTree : colors.darkNude} />
+    <Icon name={tab.img} type="font-awesome" size={ms(25)} color={isActive ? colors.silverTree : colors.darkNude} />
   );
 
   const _renderTab = ({tab, isActive}) => (
@@ -99,11 +98,6 @@ export default function BottomTabNavigation(props: IProps) {
 
   return (
     <Fragment>
-      {props.showAddCommitments ? (
-        <TouchableOpacity style={styles.btnCenter} onPress={_addCommitmentScreen}>
-          <Icon name="ios-add" size={ms(68)} color={colors.white} style={styles.iconAdd} />
-        </TouchableOpacity>
-      ) : null}
       <BottomNavigation
         activeTab={props.activeTab}
         renderTab={_renderTab}
@@ -117,7 +111,7 @@ export default function BottomTabNavigation(props: IProps) {
         <View style={styles.modalContainer}>
           <View style={styles.modalContent}>
             <TouchableOpacity style={styles.modalBtnClose} onPress={_toggleModal}>
-              <Icon name="ios-close" size={ms(20)} color={colors.manatee} />
+              <Icon type="font-awesome" name="ios-close" size={ms(25)} color={colors.manatee} />
             </TouchableOpacity>
             <Text style={styles.modalTile}>
               Please submit a working credit card before you can continue using Pledger

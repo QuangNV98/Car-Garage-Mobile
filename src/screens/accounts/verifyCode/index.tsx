@@ -56,7 +56,7 @@ class VerifyCodeComponent extends React.Component<IProps> {
 
   render() {
     return (
-      <Layout>
+      <>
         <View style={common.container}>
           <View style={{marginTop: ms(26)}}>
             <Image style={styles.img} source={require('@src/assets/images/logo_main.png')} />
@@ -87,7 +87,7 @@ class VerifyCodeComponent extends React.Component<IProps> {
             </View>
           </View>
         </View>
-      </Layout>
+      </>
     );
   }
 }

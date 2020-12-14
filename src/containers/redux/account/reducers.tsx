@@ -7,18 +7,7 @@ export default handleActions<IActionState, any>(
     [setAccountAction.toString()]: (state, {payload}) => ({
       ...state,
       id: payload.id,
-      email: payload.email,
-      first_name: payload.first_name,
-      last_name: payload.last_name,
-      avatar: payload.avatar,
-      date_of_birth: payload.date_of_birth,
-      weight: payload.weight,
-      height: payload.height,
-      gender: payload.gender,
-      creditCard: payload.credit_card,
-      has_friend: payload.has_friend,
-      fcm_token: payload.fcm_token,
-      hasPaymentFailed: payload.hasPaymentFailed,
+      name: payload.name,
     }),
     [setCreditCardAction.toString()]: (state, {payload}) => {
       const listCard = state.creditCard;

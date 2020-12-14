@@ -15,6 +15,8 @@ import {rootSignupScreen} from '../signup/navigation';
 import {IProps, IState} from './propState';
 import {logInAction} from './redux/actions';
 import styles from './styles';
+import {rootMyCommitmentScreen} from '@src/screens/myCommitment/navigation';
+
 
 class LoginComponent extends React.Component<IProps> {
   email: TextInput;
@@ -30,29 +32,31 @@ class LoginComponent extends React.Component<IProps> {
     let isValid = '';
     let controlFocus: TextInput = null;
 
-    if (!this.state.password) {
-      isValid = 'All fields are required';
-      controlFocus = this.password;
-    }
-    if (!validation.validateEmail(this.state.email)) {
-      isValid = 'Please enter a valid email';
-      controlFocus = this.email;
-    }
+    // if (!this.state.password) {
+    //   isValid = 'All fields are required';
+    //   controlFocus = this.password;
+    // }
+    // if (!validation.validateEmail(this.state.email)) {
+    //   isValid = 'Please enter a valid email';
+    //   controlFocus = this.email;
+    // }
     return {isValid, controlFocus};
   };
 
   _login = () => {
-    const {isValid, controlFocus} = this.validate();
-    if (!isValid) {
+    // const {isValid, controlFocus} = this.validate();
+    // if (!isValid) {
       this.props.logInAction(this.state.email, this.state.password);
-    } else {
-      Alert.alert('Error', isValid, [
-        {
-          text: 'OK',
-          onPress: () => (controlFocus ? controlFocus.focus() : null),
-        },
-      ]);
-    }
+      // rootMyCommitmentScreen();
+
+    // } else {
+    //   Alert.alert('Error', isValid, [
+    //     {
+    //       text: 'OK',
+    //       onPress: () => (controlFocus ? controlFocus.focus() : null),
+    //     },
+    //   ]);
+    // }
   };
 
   _goNoti = () => rootNotificationScreen();
@@ -71,13 +75,12 @@ class LoginComponent extends React.Component<IProps> {
 
   render() {
     return (
-      <Layout>
+      <>
         <View style={{backgroundColor: colors.bgColor, flex: 1}}>
           <KeyboardAwareScrollView
             keyboardShouldPersistTaps="handled"
             style={[common.container, {paddingHorizontal: ms(28), marginTop: ms(26)}]}
             accessibilityLabel="login-page">
-            <Image style={styles.img} source={require('@src/assets/images/logo_main.png')} />
             <Text style={styles.title}>Sign In</Text>
             <InputComponent
               accessibilityLabel="email"
@@ -102,32 +105,19 @@ class LoginComponent extends React.Component<IProps> {
               onChangeText={this._onChangeText('password')}
               value={this.state.password}
             />
-            <View style={styles.forgotView}>
-              <TouchableOpacity
-                onPress={this._forgotPassword}
-                disabled={this.props.isLoading}
-                accessibilityLabel="btn-forgot-password">
-                <Text style={common.textLink}>Forgot password? </Text>
-              </TouchableOpacity>
-            </View>
+            
           </KeyboardAwareScrollView>
         </View>
         <View style={styles.bottomFixed}>
           <ButtonComponent
             btnFull={true}
-            onPress={this._login}
             text="Sign In"
             disabled={this.props.isLoading}
             styleContainer={{marginHorizontal: ms(44)}}
+            onPress={this._login}
           />
-          <View style={styles.bottomRowContainer}>
-            <Text style={styles.text}>Do not have an account? </Text>
-            <TouchableOpacity onPress={this._signup} disabled={this.props.isLoading} accessibilityLabel="btn-signup">
-              <Text style={common.textLink}>Sign Up</Text>
-            </TouchableOpacity>
-          </View>
         </View>
-      </Layout>
+      </>
     );
   }
 }

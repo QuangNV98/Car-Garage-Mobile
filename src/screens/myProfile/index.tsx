@@ -25,12 +25,36 @@ import {IProps, IState} from './propState';
 import styles from './styles';
 import {myProfileSupportScreen} from './support';
 import {myProfileTAndCScreen} from './tAndC';
+import MapViewDirections from 'react-native-maps-directions';
+import MapView, {Circle, Marker, PROVIDER_GOOGLE} from 'react-native-maps';
+import {location, permission} from '@src/utils/index';
+import { callSos } from './services';
+
+const origin = {latitude: 37.3318456, longitude: -122.0296002};
+const destination = {latitude: 37.771707, longitude: -122.4053769};
+const GOOGLE_MAPS_APIKEY = 'AIzaSyAJoeG8PoyedNXBowwRUFHLrXc43yeVLPw';
 
 class MyProfileComponent extends React.Component<IProps> {
   state: IState = {
     avatar_img: this.props.avatar_img,
     showConfirmLogout: false,
+    region: null,
   };
+
+  async componentDidMount() {
+    const checkPermission = await permission.permissionMap();
+    if (checkPermission) {
+      const getLocation = await location.getCurrentPosition();
+      console.log(getLocation, "get")
+      const region = {
+        latitude: getLocation.coords.latitude,
+        longitude: getLocation.coords.longitude,
+        latitudeDelta: 0.003,
+        longitudeDelta: 0.003,
+      };
+      this.setState({region});
+    }
+  }
 
   list = [
     {
@@ -83,70 +107,58 @@ class MyProfileComponent extends React.Component<IProps> {
     this.setState({showConfirmLogout: !this.state.showConfirmLogout});
   };
 
+  _callSos = async() => {
+    const user = await AsyncStorage.getItem(System.USER_INFO);
+
+    const result = await callSos(JSON.parse(user).ID, this.state.region.latitude, this.state.region.longitude);
+  
+  }
+
   render() {
+    console.log(this.state.region, "re")
     return (
       <Fragment>
-        <ScrollView style={common.flex_1}>
-          <View style={common.container}>
-            <View style={styles.headerImageContainer}>
-              <Image
-                style={styles.headerImage}
-                source={
-                  this.state.avatar_img
-                    ? {uri: `${config.HOST_API}/${this.state.avatar_img}`}
-                    : require('@src/assets/images/avatarDefault.png')
-                }
-              />
-            </View>
-            {this.list.map((item, i) => (
-              <ListItem
-                key={i}
-                title={item.title}
-                rightIcon={<Icon name={item.icon} color={colors.darkGray} size={ms(16)} solid={true} />}
-                bottomDivider={true}
-                containerStyle={styles.listItemContainer}
-                titleStyle={styles.listItemText}
-                onPress={item.onPress}
-              />
-            ))}
-            <ButtonComponent
-              onPress={this._toggleModalLogout}
-              text="Log out"
-              styleContainer={styles.menuBottomContainer}
-              styleButton={styles.menuBottomButton}
-              styleText={styles.menuBottomText}
-              testID="btn-logout"
-            />
-          </View>
-        </ScrollView>
-        <BottomTabNavigation componentId={this.props.componentId} activeTab={APP_PROFILE_SCREEN} />
-        <Modal animationType="fade" transparent={true} visible={this.state.showConfirmLogout}>
-          <View style={styles.modalContainer}>
-            <View style={styles.modalContent}>
-              <TouchableOpacity style={styles.modalBtnClose} onPress={this._toggleModalLogout}>
-                <Icon name="times" size={ms(20)} color={colors.manatee} />
-              </TouchableOpacity>
-              <Text style={styles.modalTile}>Are you sure you</Text>
-              <Text style={styles.modalTile}>want to log out?</Text>
-              <View style={styles.modalGroupButton}>
-                <ButtonComponent
-                  styleContainer={{width: ms(114)}}
-                  styleButton={{backgroundColor: 'transparent', borderColor: colors.manatee}}
-                  styleText={{fontSize: ms(13), color: colors.manatee}}
-                  text="Cancel"
-                  onPress={this._toggleModalLogout}
-                />
-                <ButtonComponent
-                  styleContainer={{width: ms(114)}}
-                  styleButton={{backgroundColor: colors.red, borderColor: 'transparent'}}
-                  styleText={{fontSize: ms(13)}}
-                  text="Log Out"
-                  onPress={this._signout}
-                />
-              </View>
-            </View>
-          </View>
-        </Modal>
+        {/* <View style={common.container}> */}
+        {/* <MapView
+          initialRegion={{
+            latitude: 37.78825,
+            longitude: -122.4324,
+            latitudeDelta: 0.0922,
+            longitudeDelta: 0.0421,
+          }}
+          style={{width: '100%', height: '90%'}}>
+        </MapView> */}
+        {this.state.region && (
+          <>
+            <MapView
+              region={this.state.region}
+              // provider={PROVIDER_GOOGLE}
+              style={styles.map}
+              showsMyLocationButton={false}
+              showsUserLocation={false}
+              >
+              <Marker coordinate={this.state.region}>
+                <Image source={require('@src/assets/images/marker.png')} style={styles.markerSize} />
+              </Marker>
+              {/* <MapViewDirections
+                origin={{latitude: this.state.region.latitude, longitude: this.state.region.longitude}}
+                destination={{latitude: 20.980511, longitude: 105.7857363}}
+                apikey={'AIzaSyAJoeG8PoyedNXBowwRUFHLrXc43yeVLPw'}
+                strokeWidth={5}
+                strokeColor="hotpink"
+              /> */}
+            </MapView>
+            {/* <BottomTabNavigation componentId={this.props.componentId} activeTab={APP_PROFILE_SCREEN} /> */}
+          </>
+        )}
+
+          <ButtonComponent
+            styleContainer={{marginTop: 60}}
+            styleButton={{backgroundColor: colors.red, borderColor: 'transparent'}}
+            styleText={{fontSize: ms(13)}}
+            text="S.O.S"
+            onPress={this._callSos}
+          />
       </Fragment>
     );
   }

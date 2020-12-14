@@ -16,20 +16,14 @@ function* logInWatcher() {
     try {
       yield put(onLoadingAction());
       const result = yield call(checkLogin, username, password);
-      yield AsyncStorage.setItem(System.TOKEN, `Bearer ${result.access_token}`);
-      const account = yield call(getAccountInfor);
-      if (account) {
-        yield put(setAccountAction(account));
+      yield AsyncStorage.setItem(System.TOKEN, `Bearer ${result.token}`);
+      if(result){
+        const user = yield call(getAccountInfor, username);
+        yield AsyncStorage.setItem(System.USER_INFO, JSON.stringify(user));
         yield call(rootMyCommitmentScreen);
       }
     } catch (error) {
-      if (error.message === 'ACCOUNT_NOT_ACTIVE') {
-        rootSignupVerifyCodeScreen({email: username});
-      } else if (error.message === 'ACCOUNT_HAS_BEEN_DELETED') {
-        logError('The account has been deleted.');
-      } else {
-        logError('Either the email or password is incorrect. Please try again.');
-      }
+      console.log(error, "t")
     } finally {
       yield put(offLoadingAction());
     }

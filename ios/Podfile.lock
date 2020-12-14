@@ -435,6 +435,8 @@ PODS:
     - Firebase/Messaging (~> 6.30.0)
     - React
     - RNFBApp
+  - RNGestureHandler (1.8.0):
+    - React
   - RNImageCropPicker (0.32.0):
     - React-Core
     - React-RCTImage
@@ -445,6 +447,8 @@ PODS:
     - React-RCTImage
     - TOCropViewController
   - RNPermissions (2.1.5):
+    - React
+  - RNReanimated (1.13.1):
     - React
   - RNSVG (12.1.0):
     - React
@@ -513,8 +517,10 @@ DEPENDENCIES:
   - "RNFBApp (from `../node_modules/@react-native-firebase/app`)"
   - "RNFBCrashlytics (from `../node_modules/@react-native-firebase/crashlytics`)"
   - "RNFBMessaging (from `../node_modules/@react-native-firebase/messaging`)"
+  - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNImageCropPicker (from `../node_modules/react-native-image-crop-picker`)
   - RNPermissions (from `../node_modules/react-native-permissions`)
+  - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNSVG (from `../node_modules/react-native-svg`)
   - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
@@ -642,10 +648,14 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@react-native-firebase/crashlytics"
   RNFBMessaging:
     :path: "../node_modules/@react-native-firebase/messaging"
+  RNGestureHandler:
+    :path: "../node_modules/react-native-gesture-handler"
   RNImageCropPicker:
     :path: "../node_modules/react-native-image-crop-picker"
   RNPermissions:
     :path: "../node_modules/react-native-permissions"
+  RNReanimated:
+    :path: "../node_modules/react-native-reanimated"
   RNSVG:
     :path: "../node_modules/react-native-svg"
   RNVectorIcons:
@@ -723,8 +733,10 @@ SPEC CHECKSUMS:
   RNFBApp: e4321cad5dd23b43b3b4f0ca060300b9f85cb7a4
   RNFBCrashlytics: 4039c6b27a35dd6cbbb0c111d4f668ce513a2881
   RNFBMessaging: f28096dc79edf6b0a094e95c265c7224122d051d
+  RNGestureHandler: 7a5833d0f788dbd107fbb913e09aa0c1ff333c39
   RNImageCropPicker: fc4b4d2a4d7176eeb6442fa191ba56493c14b6d6
   RNPermissions: ad71dd4f767ec254f2cd57592fbee02afee75467
+  RNReanimated: dd8c286ab5dd4ba36d3a7fef8bff7e08711b5476
   RNSVG: ce9d996113475209013317e48b05c21ee988d42e
   RNVectorIcons: 0bb4def82230be1333ddaeee9fcba45f0b288ed4
   SDWebImage: 62ae4a18473520c67b79e9724c31a63599cc9423
@@ -732,6 +744,6 @@ SPEC CHECKSUMS:
   TOCropViewController: 2a1ae1242600b1f2d996fd91a5268b2309a33b5c
   Yoga: 3ebccbdd559724312790e7742142d062476b698e
 
-PODFILE CHECKSUM: bbbdb6c553a98064dd4d5f7d867bb18c2d333c09
+PODFILE CHECKSUM: e9f0228f95c58d14db8f5a24a1bbf0ee348f808d
 
 COCOAPODS: 1.9.3

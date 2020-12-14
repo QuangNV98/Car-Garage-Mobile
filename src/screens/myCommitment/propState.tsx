@@ -14,11 +14,12 @@ interface IProps extends IStateToProps, IDispatchToProps {
 interface IDispatchToProps {
   getListCommitmentAction?: (pageNumber: number, status: string) => void;
   saveCommitmentStatusAction?: (status: any) => void;
+  logOutAction?: () => void;
 }
 
 interface IState {
-  status: string;
-  status_id: number;
+  showConfirmLogout: boolean;
+  user: any
 }
 
 export {IProps, IState};

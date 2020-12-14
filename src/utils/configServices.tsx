@@ -15,13 +15,13 @@ const postService = async (url: string, body: object, isAuthorization = true, is
   try {
     const headers: any = isFormData
       ? {'Content-Type': 'multipart/form-data'}
-      : {Accept: 'application/json', 'Content-Type': 'application/json'};
+      : {Accept: '*/*', 'Content-Type': 'application/json'};
     if (isAuthorization) headers.Authorization = await AsyncStorage.getItem(System.TOKEN);
     const requestInit: any = {method: 'POST', headers};
     if (body)
       if (isFormData) requestInit.body = body;
       else requestInit.body = JSON.stringify(body);
-    const response = await fetch(`${Config.HOST_API}/${url}`, requestInit);
+    const response = await fetch(`http://192.168.43.129:8080/${url}`, requestInit);
     return await _responseConfig(response);
   } catch (error) {
     throw error;
@@ -41,7 +41,7 @@ const getService = async (url: string, params?: object, isAuthorization = true) 
       queryString = `?${Object.keys(params)
         .map((key) => `${key}=${params[key] || ''}`)
         .join('&')}`;
-    const response = await fetch(`${Config.HOST_API}/${url}${queryString}`, requestInit);
+    const response = await fetch(`http://192.168.43.129:8080/${url}${queryString}`, requestInit);
     return await _responseConfig(response);
   } catch (error) {
     throw error;

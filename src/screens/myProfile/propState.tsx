@@ -9,6 +9,7 @@ interface IDispatchToProps {
 interface IState {
   avatar_img: string;
   showConfirmLogout: boolean;
+  region: any
 }
 
 export {IProps, IState};

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* AccountabuilderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* AccountabuilderTests.m */; };
+		00E356F31AD99517003FC87E /* CarGarageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* CarGarageTests.m */; };
 		01D8EDDC97434AD186176FB7 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA7B594B5D9840A7A1500DDA /* Poppins-MediumItalic.ttf */; };
 		09D64FECF6CF4520AD6DD60C /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED7860D079D840D0B810F598 /* Rubik-MediumItalic.ttf */; };
 		0D301267238D47C3BC625681 /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF580136D56E4E2CAC958603 /* Poppins-Black.ttf */; };
@@ -17,13 +17,13 @@
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2DCD954D1E0B4F2C00145EB5 /* AccountabuilderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* AccountabuilderTests.m */; };
+		2DCD954D1E0B4F2C00145EB5 /* CarGarageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* CarGarageTests.m */; };
 		317584DA4762402E9696B3AC /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDF11F2865894094AEA54DE5 /* Rubik-Black.ttf */; };
 		366F582799BF4E5ABC346437 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7205792CFA4A456499C85629 /* Poppins-Medium.ttf */; };
 		3888106F84164871B43FA1A4 /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D41D2BBFD67C478BA32500AE /* Poppins-Thin.ttf */; };
 		38B54409D14D4BACA9527AE0 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EDAC267B0A0D4D2D940CB21B /* Rubik-Regular.ttf */; };
 		392AB61A629847C587F9C6BF /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D5E195FBB25B426FA4DC7A80 /* Rubik-Bold.ttf */; };
-		404F024F8DDE939BCC7051A4 /* libPods-Accountabuilder-AccountabuilderTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FDAA54FE5205264CE20B0093 /* libPods-Accountabuilder-AccountabuilderTests.a */; };
+		404F024F8DDE939BCC7051A4 /* libPods-CarGarage-CarGarageTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FDAA54FE5205264CE20B0093 /* libPods-CarGarage-CarGarageTests.a */; };
 		4981221E1ACA435F96810085 /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 072424A3327A4ADE843FF36F /* Poppins-ExtraLight.ttf */; };
 		49BFBC2F66CF4D789DFD2ADE /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2828062500BA47B39B3A9B22 /* Poppins-ThinItalic.ttf */; };
 		520EE949244636B200412889 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 520EE948244636B200412889 /* assets */; };
@@ -42,11 +42,11 @@
 		80768A327FF64FFB8DC7DFF8 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 589671F09B6D413E8522B008 /* Poppins-Bold.ttf */; };
 		8B489651A44B49B2BD823267 /* Poppins-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EFD2D0519D1D4A83BB33958D /* Poppins-LightItalic.ttf */; };
 		905B148F5A3F4AD5BEB0F42A /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35E280CF4ED24D2899714EE9 /* Poppins-SemiBold.ttf */; };
-		A5A3F50720430C59CF1EF86C /* libPods-Accountabuilder-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6BB67E8E530B6880220C18 /* libPods-Accountabuilder-tvOSTests.a */; };
+		A5A3F50720430C59CF1EF86C /* libPods-CarGarage-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6BB67E8E530B6880220C18 /* libPods-CarGarage-tvOSTests.a */; };
 		AA38945AA37840F6926B3CD6 /* Poppins-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A11DA49DE9AB4B4FB5462C26 /* Poppins-BlackItalic.ttf */; };
 		ACA8ABA546184375B5F48550 /* Poppins-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CCDCE7AE02EF47FAA4DA19A1 /* Poppins-SemiBoldItalic.ttf */; };
-		B0A9D74EA3784D40C4BE87E7 /* libPods-Accountabuilder-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CA4937F2F927A9292DD9700 /* libPods-Accountabuilder-tvOS.a */; };
-		BA7D8763A97AB02FDA469721 /* libPods-Accountabuilder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91050654A81BEEFDB9C9C7D2 /* libPods-Accountabuilder.a */; };
+		B0A9D74EA3784D40C4BE87E7 /* libPods-CarGarage-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CA4937F2F927A9292DD9700 /* libPods-CarGarage-tvOS.a */; };
+		BA7D8763A97AB02FDA469721 /* libPods-CarGarage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91050654A81BEEFDB9C9C7D2 /* libPods-CarGarage.a */; };
 		BAA5F3EB6CAF434AA37FEB36 /* Rubik-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 820534CC388648EB92810830 /* Rubik-BlackItalic.ttf */; };
 		C4FFF42A45E5448280CA2FA8 /* Rubik-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39FCBD63498B4EB69D82B0AC /* Rubik-Italic.ttf */; };
 		E9E61205D0384A0DAE6DDD2B /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8BFB420B03714D2AB51FA1C2 /* Poppins-ExtraBold.ttf */; };
@@ -61,34 +61,34 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = Accountabuilder;
+			remoteInfo = CarGarage;
 		};
 		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
-			remoteInfo = "Accountabuilder-tvOS";
+			remoteInfo = "CarGarage-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00E356EE1AD99517003FC87E /* AccountabuilderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AccountabuilderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* CarGarageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarGarageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* AccountabuilderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountabuilderTests.m; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* CarGarageTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarGarageTests.m; sourceTree = "<group>"; };
 		011A60573FAE4E4AAC37D0B9 /* Poppins-ExtraLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-ExtraLightItalic.ttf"; path = "../src/assets/fonts/Poppins-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
 		011D5B64E02846E5BC6085B9 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		0460EB62C85749A8BC6F5985 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
-		0635226536725E87CDED0A25 /* Pods-Accountabuilder-AccountabuilderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Accountabuilder-AccountabuilderTests.release.xcconfig"; path = "Target Support Files/Pods-Accountabuilder-AccountabuilderTests/Pods-Accountabuilder-AccountabuilderTests.release.xcconfig"; sourceTree = "<group>"; };
+		0635226536725E87CDED0A25 /* Pods-CarGarage-CarGarageTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarGarage-CarGarageTests.release.xcconfig"; path = "Target Support Files/Pods-CarGarage-CarGarageTests/Pods-CarGarage-CarGarageTests.release.xcconfig"; sourceTree = "<group>"; };
 		072424A3327A4ADE843FF36F /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-ExtraLight.ttf"; path = "../src/assets/fonts/Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
-		07BC1C809DA5D6F5BC4BC447 /* Pods-Accountabuilder-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Accountabuilder-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-Accountabuilder-tvOS/Pods-Accountabuilder-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		07BC1C809DA5D6F5BC4BC447 /* Pods-CarGarage-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarGarage-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-CarGarage-tvOS/Pods-CarGarage-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		0801072EF9014681BC8D41FE /* Rubik-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-BoldItalic.ttf"; path = "../src/assets/fonts/Rubik-BoldItalic.ttf"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* Accountabuilder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Accountabuilder.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Accountabuilder/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Accountabuilder/AppDelegate.m; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Accountabuilder/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Accountabuilder/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Accountabuilder/main.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* CarGarage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarGarage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = CarGarage/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = CarGarage/AppDelegate.m; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = CarGarage/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = CarGarage/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = CarGarage/main.m; sourceTree = "<group>"; };
 		14B90A5E731C40B390F4D8DA /* Rubik-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-LightItalic.ttf"; path = "../src/assets/fonts/Rubik-LightItalic.ttf"; sourceTree = "<group>"; };
 		14E8BE4BB77F4198A3E16A27 /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-BoldItalic.ttf"; path = "../src/assets/fonts/Poppins-BoldItalic.ttf"; sourceTree = "<group>"; };
 		1598FFB050E648469F02D567 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
@@ -97,21 +97,21 @@
 		2828062500BA47B39B3A9B22 /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-ThinItalic.ttf"; path = "../src/assets/fonts/Poppins-ThinItalic.ttf"; sourceTree = "<group>"; };
 		293A1CF9B132475FA945856E /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		2A55CABFC08E488A8F8C7D1E /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
-		2A8C26BFFF1914BF1B4F2175 /* Pods-Accountabuilder-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Accountabuilder-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-Accountabuilder-tvOSTests/Pods-Accountabuilder-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2A8C26BFFF1914BF1B4F2175 /* Pods-CarGarage-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarGarage-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-CarGarage-tvOSTests/Pods-CarGarage-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2B8971C31C8A4B9DB5466D1E /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
 		2B8E47C4426E4EE5876E4438 /* Poppins-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Light.ttf"; path = "../src/assets/fonts/Poppins-Light.ttf"; sourceTree = "<group>"; };
-		2CA4937F2F927A9292DD9700 /* libPods-Accountabuilder-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Accountabuilder-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E47B1E0B4A5D006451C7 /* Accountabuilder-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Accountabuilder-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* Accountabuilder-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Accountabuilder-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		351089019C5768034AC8E3C0 /* Pods-Accountabuilder-AccountabuilderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Accountabuilder-AccountabuilderTests.debug.xcconfig"; path = "Target Support Files/Pods-Accountabuilder-AccountabuilderTests/Pods-Accountabuilder-AccountabuilderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2CA4937F2F927A9292DD9700 /* libPods-CarGarage-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CarGarage-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E47B1E0B4A5D006451C7 /* CarGarage-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CarGarage-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* CarGarage-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CarGarage-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		351089019C5768034AC8E3C0 /* Pods-CarGarage-CarGarageTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarGarage-CarGarageTests.debug.xcconfig"; path = "Target Support Files/Pods-CarGarage-CarGarageTests/Pods-CarGarage-CarGarageTests.debug.xcconfig"; sourceTree = "<group>"; };
 		35E280CF4ED24D2899714EE9 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-SemiBold.ttf"; path = "../src/assets/fonts/Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		365AC41C40BF4D77976AB620 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		39FCBD63498B4EB69D82B0AC /* Rubik-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Italic.ttf"; path = "../src/assets/fonts/Rubik-Italic.ttf"; sourceTree = "<group>"; };
 		477A20F2E7324AD28DBF5DD8 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 		520EE948244636B200412889 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 		522FCF04250B33D800BA4905 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		526BC2812438865A00355AEE /* Accountabuilder.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; name = Accountabuilder.entitlements; path = Accountabuilder/Accountabuilder.entitlements; sourceTree = "<group>"; };
-		526BC2822438865A00355AEE /* AppCenter-Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "AppCenter-Config.plist"; path = "Accountabuilder/AppCenter-Config.plist"; sourceTree = "<group>"; };
+		526BC2812438865A00355AEE /* CarGarage.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; name = CarGarage.entitlements; path = CarGarage/CarGarage.entitlements; sourceTree = "<group>"; };
+		526BC2822438865A00355AEE /* AppCenter-Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "AppCenter-Config.plist"; path = "CarGarage/AppCenter-Config.plist"; sourceTree = "<group>"; };
 		52786B79252B3DD50050F59C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		52786BD8252B40DD0050F59C /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		52EEE898243DF86000CEDE3B /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
@@ -119,15 +119,15 @@
 		5C90B7B13144469E8021A34D /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		636FF1A2B4964B8BA8E5DB58 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		64BD180D29AC4EB794B6B01E /* Rubik-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Medium.ttf"; path = "../src/assets/fonts/Rubik-Medium.ttf"; sourceTree = "<group>"; };
-		6B6BB67E8E530B6880220C18 /* libPods-Accountabuilder-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Accountabuilder-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B6BB67E8E530B6880220C18 /* libPods-CarGarage-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CarGarage-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7205792CFA4A456499C85629 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Medium.ttf"; path = "../src/assets/fonts/Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		73615A6E52DE443493019876 /* Poppins-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-ExtraBoldItalic.ttf"; path = "../src/assets/fonts/Poppins-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		820534CC388648EB92810830 /* Rubik-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-BlackItalic.ttf"; path = "../src/assets/fonts/Rubik-BlackItalic.ttf"; sourceTree = "<group>"; };
 		8BFB420B03714D2AB51FA1C2 /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-ExtraBold.ttf"; path = "../src/assets/fonts/Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
-		91050654A81BEEFDB9C9C7D2 /* libPods-Accountabuilder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Accountabuilder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		91050654A81BEEFDB9C9C7D2 /* libPods-CarGarage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CarGarage.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9145EB77516D450AAA6AD7DC /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
 		9162D4A59BC646BE9EC65344 /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
-		9A73D0D1A1791A7B927C8A53 /* Pods-Accountabuilder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Accountabuilder.debug.xcconfig"; path = "Target Support Files/Pods-Accountabuilder/Pods-Accountabuilder.debug.xcconfig"; sourceTree = "<group>"; };
+		9A73D0D1A1791A7B927C8A53 /* Pods-CarGarage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarGarage.debug.xcconfig"; path = "Target Support Files/Pods-CarGarage/Pods-CarGarage.debug.xcconfig"; sourceTree = "<group>"; };
 		A11DA49DE9AB4B4FB5462C26 /* Poppins-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-BlackItalic.ttf"; path = "../src/assets/fonts/Poppins-BlackItalic.ttf"; sourceTree = "<group>"; };
 		AD7EE84D134949188019FAA9 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		AEF75D5460F442D0BE344283 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
@@ -136,7 +136,7 @@
 		CA7B594B5D9840A7A1500DDA /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-MediumItalic.ttf"; path = "../src/assets/fonts/Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
 		CCDCE7AE02EF47FAA4DA19A1 /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-SemiBoldItalic.ttf"; path = "../src/assets/fonts/Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		CDF11F2865894094AEA54DE5 /* Rubik-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Black.ttf"; path = "../src/assets/fonts/Rubik-Black.ttf"; sourceTree = "<group>"; };
-		D208D8951C07106F82876590 /* Pods-Accountabuilder-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Accountabuilder-tvOS.release.xcconfig"; path = "Target Support Files/Pods-Accountabuilder-tvOS/Pods-Accountabuilder-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		D208D8951C07106F82876590 /* Pods-CarGarage-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarGarage-tvOS.release.xcconfig"; path = "Target Support Files/Pods-CarGarage-tvOS/Pods-CarGarage-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		D41D2BBFD67C478BA32500AE /* Poppins-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Thin.ttf"; path = "../src/assets/fonts/Poppins-Thin.ttf"; sourceTree = "<group>"; };
 		D5E195FBB25B426FA4DC7A80 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Bold.ttf"; path = "../src/assets/fonts/Rubik-Bold.ttf"; sourceTree = "<group>"; };
 		DF66E11522B04FA78A9839EF /* Rubik-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Light.ttf"; path = "../src/assets/fonts/Rubik-Light.ttf"; sourceTree = "<group>"; };
@@ -145,9 +145,9 @@
 		ED7860D079D840D0B810F598 /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-MediumItalic.ttf"; path = "../src/assets/fonts/Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
 		EDAC267B0A0D4D2D940CB21B /* Rubik-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Regular.ttf"; path = "../src/assets/fonts/Rubik-Regular.ttf"; sourceTree = "<group>"; };
 		EFD2D0519D1D4A83BB33958D /* Poppins-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-LightItalic.ttf"; path = "../src/assets/fonts/Poppins-LightItalic.ttf"; sourceTree = "<group>"; };
-		F1453530AD9EABCAEAF50019 /* Pods-Accountabuilder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Accountabuilder.release.xcconfig"; path = "Target Support Files/Pods-Accountabuilder/Pods-Accountabuilder.release.xcconfig"; sourceTree = "<group>"; };
-		FD1F25D72A0B9A8721FC188D /* Pods-Accountabuilder-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Accountabuilder-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-Accountabuilder-tvOSTests/Pods-Accountabuilder-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		FDAA54FE5205264CE20B0093 /* libPods-Accountabuilder-AccountabuilderTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Accountabuilder-AccountabuilderTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1453530AD9EABCAEAF50019 /* Pods-CarGarage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarGarage.release.xcconfig"; path = "Target Support Files/Pods-CarGarage/Pods-CarGarage.release.xcconfig"; sourceTree = "<group>"; };
+		FD1F25D72A0B9A8721FC188D /* Pods-CarGarage-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarGarage-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-CarGarage-tvOSTests/Pods-CarGarage-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		FDAA54FE5205264CE20B0093 /* libPods-CarGarage-CarGarageTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CarGarage-CarGarageTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF580136D56E4E2CAC958603 /* Poppins-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Black.ttf"; path = "../src/assets/fonts/Poppins-Black.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,7 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				404F024F8DDE939BCC7051A4 /* libPods-Accountabuilder-AccountabuilderTests.a in Frameworks */,
+				404F024F8DDE939BCC7051A4 /* libPods-CarGarage-CarGarageTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,7 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52EEE899243DF86000CEDE3B /* HealthKit.framework in Frameworks */,
-				BA7D8763A97AB02FDA469721 /* libPods-Accountabuilder.a in Frameworks */,
+				BA7D8763A97AB02FDA469721 /* libPods-CarGarage.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,7 +173,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0A9D74EA3784D40C4BE87E7 /* libPods-Accountabuilder-tvOS.a in Frameworks */,
+				B0A9D74EA3784D40C4BE87E7 /* libPods-CarGarage-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,20 +181,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5A3F50720430C59CF1EF86C /* libPods-Accountabuilder-tvOSTests.a in Frameworks */,
+				A5A3F50720430C59CF1EF86C /* libPods-CarGarage-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* AccountabuilderTests */ = {
+		00E356EF1AD99517003FC87E /* CarGarageTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* AccountabuilderTests.m */,
+				00E356F21AD99517003FC87E /* CarGarageTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = AccountabuilderTests;
+			path = CarGarageTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -205,12 +205,12 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* Accountabuilder */ = {
+		13B07FAE1A68108700A75B9A /* CarGarage */ = {
 			isa = PBXGroup;
 			children = (
 				52786BD8252B40DD0050F59C /* main.jsbundle */,
 				52786B79252B3DD50050F59C /* GoogleService-Info.plist */,
-				526BC2812438865A00355AEE /* Accountabuilder.entitlements */,
+				526BC2812438865A00355AEE /* CarGarage.entitlements */,
 				526BC2822438865A00355AEE /* AppCenter-Config.plist */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -219,7 +219,7 @@
 				13B07FB71A68108700A75B9A /* main.m */,
 				522FCF04250B33D800BA4905 /* LaunchScreen.storyboard */,
 			);
-			name = Accountabuilder;
+			name = CarGarage;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -228,10 +228,10 @@
 				52EEE898243DF86000CEDE3B /* HealthKit.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				91050654A81BEEFDB9C9C7D2 /* libPods-Accountabuilder.a */,
-				FDAA54FE5205264CE20B0093 /* libPods-Accountabuilder-AccountabuilderTests.a */,
-				2CA4937F2F927A9292DD9700 /* libPods-Accountabuilder-tvOS.a */,
-				6B6BB67E8E530B6880220C18 /* libPods-Accountabuilder-tvOSTests.a */,
+				91050654A81BEEFDB9C9C7D2 /* libPods-CarGarage.a */,
+				FDAA54FE5205264CE20B0093 /* libPods-CarGarage-CarGarageTests.a */,
+				2CA4937F2F927A9292DD9700 /* libPods-CarGarage-tvOS.a */,
+				6B6BB67E8E530B6880220C18 /* libPods-CarGarage-tvOSTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -247,9 +247,9 @@
 			isa = PBXGroup;
 			children = (
 				520EE948244636B200412889 /* assets */,
-				13B07FAE1A68108700A75B9A /* Accountabuilder */,
+				13B07FAE1A68108700A75B9A /* CarGarage */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* AccountabuilderTests */,
+				00E356EF1AD99517003FC87E /* CarGarageTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				975A9FA8894E9848D8B26820 /* Pods */,
@@ -263,10 +263,10 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* Accountabuilder.app */,
-				00E356EE1AD99517003FC87E /* AccountabuilderTests.xctest */,
-				2D02E47B1E0B4A5D006451C7 /* Accountabuilder-tvOS.app */,
-				2D02E4901E0B4A5D006451C7 /* Accountabuilder-tvOSTests.xctest */,
+				13B07F961A680F5B00A75B9A /* CarGarage.app */,
+				00E356EE1AD99517003FC87E /* CarGarageTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* CarGarage-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* CarGarage-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -325,14 +325,14 @@
 		975A9FA8894E9848D8B26820 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9A73D0D1A1791A7B927C8A53 /* Pods-Accountabuilder.debug.xcconfig */,
-				F1453530AD9EABCAEAF50019 /* Pods-Accountabuilder.release.xcconfig */,
-				351089019C5768034AC8E3C0 /* Pods-Accountabuilder-AccountabuilderTests.debug.xcconfig */,
-				0635226536725E87CDED0A25 /* Pods-Accountabuilder-AccountabuilderTests.release.xcconfig */,
-				07BC1C809DA5D6F5BC4BC447 /* Pods-Accountabuilder-tvOS.debug.xcconfig */,
-				D208D8951C07106F82876590 /* Pods-Accountabuilder-tvOS.release.xcconfig */,
-				2A8C26BFFF1914BF1B4F2175 /* Pods-Accountabuilder-tvOSTests.debug.xcconfig */,
-				FD1F25D72A0B9A8721FC188D /* Pods-Accountabuilder-tvOSTests.release.xcconfig */,
+				9A73D0D1A1791A7B927C8A53 /* Pods-CarGarage.debug.xcconfig */,
+				F1453530AD9EABCAEAF50019 /* Pods-CarGarage.release.xcconfig */,
+				351089019C5768034AC8E3C0 /* Pods-CarGarage-CarGarageTests.debug.xcconfig */,
+				0635226536725E87CDED0A25 /* Pods-CarGarage-CarGarageTests.release.xcconfig */,
+				07BC1C809DA5D6F5BC4BC447 /* Pods-CarGarage-tvOS.debug.xcconfig */,
+				D208D8951C07106F82876590 /* Pods-CarGarage-tvOS.release.xcconfig */,
+				2A8C26BFFF1914BF1B4F2175 /* Pods-CarGarage-tvOSTests.debug.xcconfig */,
+				FD1F25D72A0B9A8721FC188D /* Pods-CarGarage-tvOSTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -340,9 +340,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* AccountabuilderTests */ = {
+		00E356ED1AD99517003FC87E /* CarGarageTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "AccountabuilderTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "CarGarageTests" */;
 			buildPhases = (
 				4455A5B1532B65F5D762212F /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -355,14 +355,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = AccountabuilderTests;
-			productName = AccountabuilderTests;
-			productReference = 00E356EE1AD99517003FC87E /* AccountabuilderTests.xctest */;
+			name = CarGarageTests;
+			productName = CarGarageTests;
+			productReference = 00E356EE1AD99517003FC87E /* CarGarageTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* Accountabuilder */ = {
+		13B07F861A680F5B00A75B9A /* CarGarage */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Accountabuilder" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "CarGarage" */;
 			buildPhases = (
 				2DB69BBD860C3336DDD76A9C /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -378,14 +378,14 @@
 			);
 			dependencies = (
 			);
-			name = Accountabuilder;
-			productName = Accountabuilder;
-			productReference = 13B07F961A680F5B00A75B9A /* Accountabuilder.app */;
+			name = CarGarage;
+			productName = CarGarage;
+			productReference = 13B07F961A680F5B00A75B9A /* CarGarage.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E47A1E0B4A5D006451C7 /* Accountabuilder-tvOS */ = {
+		2D02E47A1E0B4A5D006451C7 /* CarGarage-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Accountabuilder-tvOS" */;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "CarGarage-tvOS" */;
 			buildPhases = (
 				E730CDD0566C01FC85FC2DC8 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
@@ -398,14 +398,14 @@
 			);
 			dependencies = (
 			);
-			name = "Accountabuilder-tvOS";
-			productName = "Accountabuilder-tvOS";
-			productReference = 2D02E47B1E0B4A5D006451C7 /* Accountabuilder-tvOS.app */;
+			name = "CarGarage-tvOS";
+			productName = "CarGarage-tvOS";
+			productReference = 2D02E47B1E0B4A5D006451C7 /* CarGarage-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E48F1E0B4A5D006451C7 /* Accountabuilder-tvOSTests */ = {
+		2D02E48F1E0B4A5D006451C7 /* CarGarage-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Accountabuilder-tvOSTests" */;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "CarGarage-tvOSTests" */;
 			buildPhases = (
 				138E1DF86CA2172F0E140702 /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
@@ -417,9 +417,9 @@
 			dependencies = (
 				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
 			);
-			name = "Accountabuilder-tvOSTests";
-			productName = "Accountabuilder-tvOSTests";
-			productReference = 2D02E4901E0B4A5D006451C7 /* Accountabuilder-tvOSTests.xctest */;
+			name = "CarGarage-tvOSTests";
+			productName = "CarGarage-tvOSTests";
+			productReference = 2D02E4901E0B4A5D006451C7 /* CarGarage-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -437,9 +437,9 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						DevelopmentTeam = NF362XBK7F;
+						DevelopmentTeam = CB69RCTXVL;
 						LastSwiftMigration = 1120;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -452,7 +452,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Accountabuilder" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "CarGarage" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -465,10 +465,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* Accountabuilder */,
-				00E356ED1AD99517003FC87E /* AccountabuilderTests */,
-				2D02E47A1E0B4A5D006451C7 /* Accountabuilder-tvOS */,
-				2D02E48F1E0B4A5D006451C7 /* Accountabuilder-tvOSTests */,
+				13B07F861A680F5B00A75B9A /* CarGarage */,
+				00E356ED1AD99517003FC87E /* CarGarageTests */,
+				2D02E47A1E0B4A5D006451C7 /* CarGarage-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* CarGarage-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -569,7 +569,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Accountabuilder-tvOSTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-CarGarage-tvOSTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -582,7 +582,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Accountabuilder/Pods-Accountabuilder-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-CarGarage/Pods-CarGarage-resources.sh",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 				"${PODS_ROOT}/Mixpanel/Mixpanel/Images/MPArrowLeft.png",
@@ -663,7 +663,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Accountabuilder/Pods-Accountabuilder-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CarGarage/Pods-CarGarage-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
@@ -695,7 +695,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Accountabuilder-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-CarGarage-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -717,7 +717,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Accountabuilder-AccountabuilderTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-CarGarage-CarGarageTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -740,7 +740,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Accountabuilder-AccountabuilderTests/Pods-Accountabuilder-AccountabuilderTests-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-CarGarage-CarGarageTests/Pods-CarGarage-CarGarageTests-resources.sh",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 				"${PODS_ROOT}/Mixpanel/Mixpanel/Images/MPArrowLeft.png",
@@ -821,7 +821,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Accountabuilder-AccountabuilderTests/Pods-Accountabuilder-AccountabuilderTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CarGarage-CarGarageTests/Pods-CarGarage-CarGarageTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B2A67393CF93407C8EEFDD06 /* [CP-User] [RNFB] Core Configuration */ = {
@@ -849,7 +849,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Accountabuilder-tvOS-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-CarGarage-tvOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -901,7 +901,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* AccountabuilderTests.m in Sources */,
+				00E356F31AD99517003FC87E /* CarGarageTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -927,7 +927,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DCD954D1E0B4F2C00145EB5 /* AccountabuilderTests.m in Sources */,
+				2DCD954D1E0B4F2C00145EB5 /* CarGarageTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -936,12 +936,12 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* Accountabuilder */;
+			target = 13B07F861A680F5B00A75B9A /* CarGarage */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D02E47A1E0B4A5D006451C7 /* Accountabuilder-tvOS */;
+			target = 2D02E47A1E0B4A5D006451C7 /* CarGarage-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -949,7 +949,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 351089019C5768034AC8E3C0 /* Pods-Accountabuilder-AccountabuilderTests.debug.xcconfig */;
+			baseConfigurationReference = 351089019C5768034AC8E3C0 /* Pods-CarGarage-CarGarageTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Manual;
@@ -958,7 +958,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = AccountabuilderTests/Info.plist;
+				INFOPLIST_FILE = CarGarageTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -970,19 +970,19 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Accountabuilder.app/Accountabuilder";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CarGarage.app/CarGarage";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0635226536725E87CDED0A25 /* Pods-Accountabuilder-AccountabuilderTests.release.xcconfig */;
+			baseConfigurationReference = 0635226536725E87CDED0A25 /* Pods-CarGarage-CarGarageTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = LTAG4NC5QT;
-				INFOPLIST_FILE = AccountabuilderTests/Info.plist;
+				INFOPLIST_FILE = CarGarageTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -994,27 +994,27 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Accountabuilder.app/Accountabuilder";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CarGarage.app/CarGarage";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A73D0D1A1791A7B927C8A53 /* Pods-Accountabuilder.debug.xcconfig */;
+			baseConfigurationReference = 9A73D0D1A1791A7B927C8A53 /* Pods-CarGarage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = Accountabuilder/Accountabuilder.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development: James Ruhle (UNMUAYTH23)";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_ENTITLEMENTS = CarGarage/CarGarage.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = NF362XBK7F;
+				DEVELOPMENT_TEAM = CB69RCTXVL;
 				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"FB_SONARKIT_ENABLED=1",
 				);
-				INFOPLIST_FILE = Accountabuilder/Info.plist;
+				INFOPLIST_FILE = CarGarage/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1022,9 +1022,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pg.pledge;
-				PRODUCT_NAME = Accountabuilder;
-				PROVISIONING_PROFILE_SPECIFIER = "Pledge Develop";
+				PRODUCT_BUNDLE_IDENTIFIER = com.quang.cargarage;
+				PRODUCT_NAME = CarGarage;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1033,16 +1033,16 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F1453530AD9EABCAEAF50019 /* Pods-Accountabuilder.release.xcconfig */;
+			baseConfigurationReference = F1453530AD9EABCAEAF50019 /* Pods-CarGarage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = Accountabuilder/Accountabuilder.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Distribution: James Ruhle (NF362XBK7F)";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_ENTITLEMENTS = CarGarage/CarGarage.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = NF362XBK7F;
-				INFOPLIST_FILE = Accountabuilder/Info.plist;
+				DEVELOPMENT_TEAM = CB69RCTXVL;
+				INFOPLIST_FILE = CarGarage/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1050,9 +1050,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pg.pledge;
-				PRODUCT_NAME = Accountabuilder;
-				PROVISIONING_PROFILE_SPECIFIER = "Pledge Ad Hoc";
+				PRODUCT_BUNDLE_IDENTIFIER = com.quang.cargarage;
+				PRODUCT_NAME = CarGarage;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1060,7 +1060,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 07BC1C809DA5D6F5BC4BC447 /* Pods-Accountabuilder-tvOS.debug.xcconfig */;
+			baseConfigurationReference = 07BC1C809DA5D6F5BC4BC447 /* Pods-CarGarage-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1071,14 +1071,14 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Accountabuilder-tvOS/Info.plist";
+				INFOPLIST_FILE = "CarGarage-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Accountabuilder-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.CarGarage-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -1088,7 +1088,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D208D8951C07106F82876590 /* Pods-Accountabuilder-tvOS.release.xcconfig */;
+			baseConfigurationReference = D208D8951C07106F82876590 /* Pods-CarGarage-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1099,14 +1099,14 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Accountabuilder-tvOS/Info.plist";
+				INFOPLIST_FILE = "CarGarage-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Accountabuilder-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.CarGarage-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -1116,7 +1116,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2A8C26BFFF1914BF1B4F2175 /* Pods-Accountabuilder-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = 2A8C26BFFF1914BF1B4F2175 /* Pods-CarGarage-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1126,24 +1126,24 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Accountabuilder-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "CarGarage-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Accountabuilder-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.CarGarage-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Accountabuilder-tvOS.app/Accountabuilder-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CarGarage-tvOS.app/CarGarage-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Debug;
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FD1F25D72A0B9A8721FC188D /* Pods-Accountabuilder-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = FD1F25D72A0B9A8721FC188D /* Pods-CarGarage-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1153,17 +1153,17 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Accountabuilder-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "CarGarage-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Accountabuilder-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.CarGarage-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Accountabuilder-tvOS.app/Accountabuilder-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CarGarage-tvOS.app/CarGarage-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Release;
@@ -1284,7 +1284,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "AccountabuilderTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "CarGarageTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -1293,7 +1293,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Accountabuilder" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "CarGarage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -1302,7 +1302,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Accountabuilder-tvOS" */ = {
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "CarGarage-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
@@ -1311,7 +1311,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Accountabuilder-tvOSTests" */ = {
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "CarGarage-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
@@ -1320,7 +1320,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Accountabuilder" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "CarGarage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

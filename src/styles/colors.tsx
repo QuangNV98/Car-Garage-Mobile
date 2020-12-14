@@ -46,7 +46,7 @@ export default {
   trackColor: '#d1d1d1',
 
   greenMain: '#53C392',
-  silverTree: '#53C392',
+  silverTree: '#ffa07a',
   manatee: '#8F96A5',
   eastBay: '#485162',
   silverTreeOpacity: '#E3F5F2',

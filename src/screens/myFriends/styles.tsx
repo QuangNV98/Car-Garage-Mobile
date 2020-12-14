@@ -119,6 +119,8 @@ const styles = StyleSheet.create({
   itemTopLeft: {
     flex: 1,
     paddingRight: ms(10),
+    flexDirection: 'row',
+    justifyContent: 'space-around'
   },
   itemTopRight: {
     flexDirection: 'row',
@@ -289,6 +291,12 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     marginHorizontal: ms(5),
     marginVertical: ms(5),
+  },
+  pageTitle: {
+    fontWeight: 'bold',
+    fontSize: 24,
+    color: colors.darkMain,
+    marginVertical: 20,
   },
 });
 
