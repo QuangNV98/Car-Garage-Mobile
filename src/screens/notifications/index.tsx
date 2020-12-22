@@ -10,15 +10,11 @@ import {Icon} from 'react-native-elements';
 import Modal from 'react-native-modal';
 import {connect} from 'react-redux';
 import {bindActionCreators, Dispatch} from 'redux';
-import {notiFriendProgressScreen} from '../myCommitment/friendProgress/navigation';
 import {APP_NOTIFICATION_SCREEN} from './navigation';
-import {notiPayoutScreen} from './payout/navigation';
-import {notiPayoutSuccessScreen} from './payout_success/navigation';
 import {IProps, IState} from './propState';
 import {getListNotificationsAction} from './redux/actions';
 import styles from './styles';
 import ButtonComponent from '@src/containers/components/button';
-import {addCommitmentFinishScreen} from '../myCommitment/addCommitment/finishOnBoarding/navigation';
 import moment from 'moment';
 import Dash from 'react-native-dash';
 
@@ -31,14 +27,6 @@ class NotificationComponent extends React.Component<IProps> {
   componentDidMount() {
     this.props.getListNotificationsAction();
   }
-
-  _goPayout = (item, str2) => () => {
-    notiPayoutScreen(this.props.componentId, {commitmentId: item.commitment_id, name: str2, item});
-  };
-
-  _goPayoutSuccess = (item, str2) => () => {
-    notiPayoutSuccessScreen(this.props.componentId, {commitmentId: item.commitment_id, item, name: str2});
-  };
 
   _showModal = (item) => () => {
     this.setState(
@@ -61,13 +49,9 @@ class NotificationComponent extends React.Component<IProps> {
         modalStatus: false,
       },
       () => {
-        addCommitmentFinishScreen(this.props.componentId, {item});
+        // addCommitmentFinishScreen(this.props.componentId, {item});
       },
     );
-  };
-
-  _viewTrackerProgress = (item, username) => () => {
-    notiFriendProgressScreen(this.props.componentId, {item, username});
   };
 
   _renderItem = ({item}) => {
@@ -103,23 +87,7 @@ class NotificationComponent extends React.Component<IProps> {
     }
     return (
       <>
-        <TouchableOpacity
-          style={styles.itemContainer}
-          onPress={
-            item && item.notification_type === 'PAYOUT_FAIL'
-              ? item.cCommitmentModel.stake_type === 'STAKE_TO_FRIEND'
-                ? this._showModal(item)
-                : null
-              : // : item.notification_type === 'VIEW_PROGRESS_TRACKER'
-              // ? this._viewTrackerProgress(item.cCommitmentModel, str2)
-              item.notification_type === 'PAYOUT_SUCCESS' && item.status === 'ACTIVE'
-              ? item.cCommitmentModel && item.cCommitmentModel.accountModel.id !== item.account_receive_id
-                ? this._goPayout(item, str1)
-                : null
-              : item.notification_type === 'PAYOUT_SUCCESS' && item.status === 'FINISH'
-              ? this._goPayoutSuccess(item, str1)
-              : null
-          }>
+        <TouchableOpacity style={styles.itemContainer}>
           <View style={styles.leftItem}>
             <Image
               style={styles.itemIconLeft}
@@ -160,7 +128,7 @@ class NotificationComponent extends React.Component<IProps> {
                 styleContainer={styles.btnView}
                 styleButton={styles.btnViewContainer}
                 styleText={styles.textView}
-                onPress={this._viewTrackerProgress(item.cCommitmentModel, str1)}
+                onPress={() => {}}
               />
             ) : null}
             <Text style={styles.itemTime}>

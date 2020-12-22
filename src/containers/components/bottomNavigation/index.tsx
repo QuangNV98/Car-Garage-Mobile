@@ -1,9 +1,8 @@
 import {RootState} from '@src/boot/rootReducers';
-import {addCommitmentChooseGoalScreen} from '@src/screens/myCommitment/addCommitment/chooseGoal/navigation';
 import {APP_MY_COMMITMENT_SCREEN, rootMyCommitmentScreen} from '@src/screens/myCommitment/navigation';
-import {APP_PROFILE_SCREEN, rootProfileScreen} from '@src/screens/myProfile/navigation';
+import {APP_PROFILE_SCREEN, rootProfileScreen} from '@src/screens/rescue/navigation';
 import {APP_NOTIFICATION_SCREEN, rootNotificationScreen} from '@src/screens/notifications/navigation';
-import {APP_MY_FRIEND_SCREEN, rootMyFriendScreen} from '@src/screens/myFriends/navigation';
+import {APP_MY_FRIEND_SCREEN, rootMyFriendScreen} from '@src/screens/transactions/navigation';
 import {colors} from '@src/styles';
 import {ms} from '@src/styles/scalingUtils';
 import React, {Fragment, useState} from 'react';
@@ -14,8 +13,7 @@ import {useSelector} from 'react-redux';
 import {IProps, IState} from './propState';
 import styles from './styles';
 import ButtonComponent from '@src/containers/components/button';
-import {myProfileUpdatePaymentScreen} from '@src/screens/myProfile/payment/updatePayment';
-import {location, permission} from '@src/utils/index';
+import {myProfileUpdatePaymentScreen} from '@src/screens/rescue/payment/updatePayment';
 
 export default function BottomTabNavigation(props: IProps) {
   props = useSelector<RootState, IProps>((state: RootState) => ({
@@ -59,14 +57,6 @@ export default function BottomTabNavigation(props: IProps) {
       onPress: () => rootNotificationScreen(),
     },
   ];
-
-  const _addCommitmentScreen = () => {
-    if (!props.hasPaymentFailed) {
-      addCommitmentChooseGoalScreen(props.componentId);
-    } else {
-      _toggleModal();
-    }
-  };
 
   const _toggleModal = () => {
     setState((state: IState) => ({

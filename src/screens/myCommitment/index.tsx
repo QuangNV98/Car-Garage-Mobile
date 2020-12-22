@@ -11,12 +11,9 @@ import {Alert, Image, Text, TouchableOpacity, View, Modal} from 'react-native';
 import {Icon} from 'react-native-elements';
 import ModalDropdown from 'react-native-modal-dropdown';
 import {useDispatch, useSelector} from 'react-redux';
-import {rootProfileScreen} from '../myProfile/navigation';
-import {ListCommitmentComponent} from './listCommitments';
+import {rootProfileScreen} from '../rescue/navigation';
 import {APP_MY_COMMITMENT_SCREEN} from './navigation';
 import {IProps, IState} from './propState';
-import {getListCommitmentAction} from './redux/actions';
-import {addCommitmentStartRunningScreen} from './startRunning/navigation';
 import styles from './styles';
 import {logOutAction} from '@src/containers/redux/common/actions';
 import {rootLoginScreen} from '@src/screens/accounts/signin/navigation';
@@ -70,7 +67,6 @@ export const MyCommitmentComponent: FC<IProps> = (props: IProps) => {
           </TouchableOpacity>
         </View>
       </View>
-      <ListCommitmentComponent componentId={props.componentId} />
       <BottomTabNavigation
         componentId={props.componentId}
         activeTab={APP_MY_COMMITMENT_SCREEN}
@@ -82,8 +78,6 @@ export const MyCommitmentComponent: FC<IProps> = (props: IProps) => {
             <TouchableOpacity style={styles.modalBtnClose} onPress={_toggleModalLogout}>
               <IconE name="times" size={20} color={colors.manatee} />
             </TouchableOpacity>
-            {/* <Text style={styles.modalTile}>Are you sure you</Text>
-            <Text style={styles.modalTile}>want to log out?</Text> */}
             <View style={styles.modalGroupButton}>
               <ButtonComponent
                 styleContainer={{width: 114}}

@@ -1,7 +1,6 @@
 import ButtonComponent from '@src/containers/components/button';
 import InputComponent from '@src/containers/components/input';
 import Layout from '@src/containers/components/layout';
-import {rootForgotPasswordScreen} from '@src/screens/accounts/forgotPassword/navigation';
 import {rootNotificationScreen} from '@src/screens/notifications/navigation';
 import {colors, common} from '@src/styles';
 import {ms} from '@src/styles/scalingUtils';
@@ -11,7 +10,6 @@ import {Alert, Image, ScrollView, Text, TextInput, TouchableOpacity, View} from 
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {connect} from 'react-redux';
 import {bindActionCreators, Dispatch} from 'redux';
-import {rootSignupScreen} from '../signup/navigation';
 import {IProps, IState} from './propState';
 import {logInAction} from './redux/actions';
 import styles from './styles';
@@ -61,10 +59,6 @@ class LoginComponent extends React.Component<IProps> {
 
   _goNoti = () => rootNotificationScreen();
 
-  _signup = () => rootSignupScreen();
-
-  _forgotPassword = () => rootForgotPasswordScreen();
-
   _onChangeText = (state: string) => (evt: any) => this.setState({[state]: evt});
 
   togglePassword = () => {
@@ -95,7 +89,7 @@ class LoginComponent extends React.Component<IProps> {
             <InputComponent
               accessibilityLabel="password"
               ref={(input) => (this.password = input)}
-              leftIcon="ios-lock"
+              leftIcon="eyes"
               leftIconType="ionicon"
               rightIcon={this.state.disabledPass ? 'ios-eye-off' : 'ios-eye'}
               rightIconType="ionicon"
