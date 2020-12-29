@@ -5,7 +5,6 @@ import {logOutAction} from '@src/containers/redux/common/actions';
 import {getAccountInfor} from '@src/containers/services';
 import {rootLoginScreen} from '@src/screens/accounts/signin/navigation';
 import {rootMyCommitmentScreen} from '@src/screens/myCommitment/navigation';
-import {rootStartedScreen} from '@src/screens/started/navigation';
 import {typography} from '@src/utils/typography';
 import {Navigation} from 'react-native-navigation';
 import {checkInternetConnection, offlineActionTypes} from 'react-native-offline';
@@ -13,6 +12,7 @@ import {persistStore} from 'redux-persist';
 import configureStore from './src/boot/configureStore';
 import {registerScreens} from './src/registerScreens';
 import Mixpanel from 'react-native-mixpanel';
+import firebase from 'react-native-firebase';
 
 typography();
 
@@ -31,20 +31,8 @@ Navigation.events().registerAppLaunchedListener(() => {
         });
 
         const token = await AsyncStorage.getItem(System.TOKEN);
-        // const account = store.getState().account;
-        // if (checkPassStarted !== 'passed') {
-        //   rootStartedScreen();
-        // } else if (account.id) {
-        //   console.log(account, 'account');
-          if (token) {
-            rootMyCommitmentScreen();
-          } else {
-            rootLoginScreen();
-          }
-        //   }
-        // } else {
-          // rootLoginScreen();
-        // }
+
+        rootLoginScreen();
       } catch (error) {
         await store.dispatch(logOutAction());
         rootLoginScreen();

@@ -290,6 +290,36 @@ const styles = StyleSheet.create({
     marginHorizontal: ms(5),
     marginVertical: ms(5),
   },
+  itemTime: {
+    fontSize: ms(12),
+    color: colors.darkMain,
+    opacity: 0.3,
+    marginTop: (10),
+  },
+  itemContainer: {
+    marginBottom: ms(20),
+    flexDirection: 'row',
+  },
+  leftItem: {
+    paddingTop: (5),
+  },
+  rightItem: {
+    paddingLeft: s(20),
+    flex: 1,
+  },
+  itemIconLeft: {
+    width: s(40),
+    height: (40),
+    borderRadius: 20,
+  },
+  itemTextContent: {
+    color: colors.eastBay,
+    textAlign: 'left',
+  },
+  itemTextContentUser: {
+    color: colors.silverTree,
+    textAlign: 'left',
+  },
 });
 
 export default styles;

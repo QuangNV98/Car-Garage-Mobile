@@ -49,13 +49,6 @@ export default function BottomTabNavigation(props: IProps) {
         rootProfileScreen()
       },
     },
-    {
-      key: APP_NOTIFICATION_SCREEN,
-      label: 'Notifications',
-      barColor: colors.white,
-      img: 'bell',
-      onPress: () => rootNotificationScreen(),
-    },
   ];
 
   const _toggleModal = () => {

@@ -1,6 +1,5 @@
 import ButtonComponent from '@src/containers/components/button';
 import InputComponent from '@src/containers/components/input';
-import Layout from '@src/containers/components/layout';
 import {rootNotificationScreen} from '@src/screens/notifications/navigation';
 import {colors, common} from '@src/styles';
 import {ms} from '@src/styles/scalingUtils';
@@ -13,10 +12,10 @@ import {bindActionCreators, Dispatch} from 'redux';
 import {IProps, IState} from './propState';
 import {logInAction} from './redux/actions';
 import styles from './styles';
-import {rootMyCommitmentScreen} from '@src/screens/myCommitment/navigation';
+import firebase from 'react-native-firebase';
+import AsyncStorage from '@react-native-community/async-storage';
 
-
-class LoginComponent extends React.Component<IProps> {
+class LoginComponent extends React.Component<any> {
   email: TextInput;
   password: TextInput;
 
@@ -25,7 +24,68 @@ class LoginComponent extends React.Component<IProps> {
     password: '',
     disabledPass: true,
   };
+  async componentDidMount() {
+    console.log('vao');
+    this.checkPermission();
+    this.createNotificationListeners();
+  }
 
+  async createNotificationListeners() {
+    //Tạo channel
+    const channel = new firebase.notifications.Android.Channel(
+      'test-channel',
+      'Test Channel',
+      firebase.notifications.Android.Importance.Max,
+    ).setDescription('My apps test channel');
+    firebase.notifications().android.createChannel(channel);
+
+    //Vietnamese explain: khi đang ở foreground => show alert khi có noti
+    this.notificationListener = firebase.notifications().onNotification((noti) => {
+      const {title, body} = noti;
+      Alert.alert(title, body);
+    });
+  }
+
+  async checkPermission() {
+    console.log('m');
+    const enabled = true;
+    console.log(enabled, 'en');
+    if (enabled) {
+      const fcmToken = await firebase.messaging().getToken();
+
+      if (fcmToken) {
+        console.log(fcmToken);
+        // await Clipboard.setString(fcmToken)
+      }
+    } else {
+      this.requestPermission();
+    }
+  }
+  //Step 2: if not has permission -> process request
+  async requestPermission() {
+    try {
+      await firebase.messaging().requestPermission();
+      // User has authorised
+      this.getToken();
+    } catch (error) {
+      // User has rejected permissions
+      console.log('quyền bị từ chối');
+    }
+  }
+  //Step 3: if has permission -> process get Token
+  async getToken() {
+    let fcmToken = await AsyncStorage.getItem('fcmToken');
+    console.log('token = ', fcmToken);
+
+    if (!fcmToken) {
+      fcmToken = await firebase.messaging().getToken();
+      console.log('token = ', fcmToken);
+      if (fcmToken) {
+        // user has a device token
+        await AsyncStorage.setItem('fcmToken', fcmToken);
+      }
+    }
+  }
   validate = () => {
     let isValid = '';
     let controlFocus: TextInput = null;
@@ -41,11 +101,25 @@ class LoginComponent extends React.Component<IProps> {
     return {isValid, controlFocus};
   };
 
-  _login = () => {
+  _login = async () => {
+    let config = {
+      apiKey: 'AIzaSyAFFEhrr0CDZ3zXnVNc9HAcdgQ4UBUQec4',
+      databaseURL: 'cargarage-297810.firebaseapp.com',
+      projectId: 'cargarage-297810',
+      storageBucket: 'cargarage-297810.appspot.com',
+      messagingSenderId: '509823215770',
+      appId: '1:509823215770:web:c4a84edb6698d818ac5723',
+    };
+    firebase.initializeApp(config, null);
     // const {isValid, controlFocus} = this.validate();
     // if (!isValid) {
-      this.props.logInAction(this.state.email, this.state.password);
-      // rootMyCommitmentScreen();
+    this.props.logInAction(this.state.email, this.state.password);
+    // const fcmToken = await firebase.messaging().getToken();
+
+    // if (fcmToken) {
+    //   console.log(fcmToken);
+    // }
+    // rootMyCommitmentScreen();
 
     // } else {
     //   Alert.alert('Error', isValid, [
@@ -99,7 +173,6 @@ class LoginComponent extends React.Component<IProps> {
               onChangeText={this._onChangeText('password')}
               value={this.state.password}
             />
-            
           </KeyboardAwareScrollView>
         </View>
         <View style={styles.bottomFixed}>

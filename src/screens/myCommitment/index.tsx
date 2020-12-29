@@ -1,17 +1,12 @@
 import AsyncStorage from '@react-native-community/async-storage';
 import {RootState} from '@src/boot/rootReducers';
 import {System} from '@src/constant';
-import config from '@src/constant/config';
 import BottomTabNavigation from '@src/containers/components/bottomNavigation';
-import Layout from '@src/containers/components/layout';
-import {saveCommitmentStatusAction} from '@src/containers/redux/common/actions';
 import {colors, common} from '@src/styles';
 import React, {FC, useEffect, useState} from 'react';
-import {Alert, Image, Text, TouchableOpacity, View, Modal} from 'react-native';
+import {Alert, Image, Text, TouchableOpacity, View, Modal, FlatList} from 'react-native';
 import {Icon} from 'react-native-elements';
-import ModalDropdown from 'react-native-modal-dropdown';
 import {useDispatch, useSelector} from 'react-redux';
-import {rootProfileScreen} from '../rescue/navigation';
 import {APP_MY_COMMITMENT_SCREEN} from './navigation';
 import {IProps, IState} from './propState';
 import styles from './styles';
@@ -19,18 +14,24 @@ import {logOutAction} from '@src/containers/redux/common/actions';
 import {rootLoginScreen} from '@src/screens/accounts/signin/navigation';
 import ButtonComponent from '@src/containers/components/button';
 import IconE from 'react-native-vector-icons/FontAwesome5';
+import firebase from 'react-native-firebase';
+import {updateFcmTokenAction} from './redux/actions';
+import {getNotification} from './services';
+import moment from 'moment';
 
-export const MyCommitmentComponent: FC<IProps> = (props: IProps) => {
+export const MyCommitmentComponent: FC<any> = (props: any) => {
   const dispatch = useDispatch();
 
   props = useSelector<RootState, IProps>((state: any) => ({
     ...props,
     account: state.account,
+    listNotification: [],
     logOutAction: () => dispatch(logOutAction()),
+    updateFcmTokenAction: (ID, FCM_TOKEN) => dispatch(updateFcmTokenAction(ID, FCM_TOKEN)),
   }));
   const [state, setState] = useState<any>({
     showConfirmLogout: false,
-    user: null
+    user: null,
   });
 
   const _signout = () => {
@@ -44,13 +45,46 @@ export const MyCommitmentComponent: FC<IProps> = (props: IProps) => {
   };
 
   useEffect(() => {
-    getToken()
+    getToken();
+    getListNotificationById();
   }, []);
 
   const getToken = async () => {
     const user = await AsyncStorage.getItem(System.USER_INFO);
     setState((state: IState) => ({...state, user}));
-  }
+    const fcmToken = await firebase.messaging().getToken();
+
+    if (fcmToken) {
+      props.updateFcmTokenAction(JSON.parse(user).ID, fcmToken);
+    }
+  };
+
+  const getListNotificationById = async () => {
+    const user = await AsyncStorage.getItem(System.USER_INFO);
+
+    const result = await getNotification(JSON.parse(user).ID);
+    setState((state: IState) => ({...state, listNotification: result}));
+
+    console.log(result, 'e');
+  };
+
+  const _renderItem = ({item, index}) => {
+    console.log(item, 't');
+    return (
+      <>
+        <TouchableOpacity style={styles.itemContainer}>
+          <View style={styles.rightItem}>
+            <Text style={styles.itemTextContent}>
+              <Text style={styles.itemTextContentUser}>{item.BODY}</Text>
+            </Text>
+            <Text style={styles.itemTime}>
+              {item.TIME}
+            </Text>
+          </View>
+        </TouchableOpacity>
+      </>
+    );
+  };
 
   return (
     <>
@@ -66,6 +100,7 @@ export const MyCommitmentComponent: FC<IProps> = (props: IProps) => {
             <Icon name="sign-out" type="font-awesome" color={colors.silverTree} size={30} />
           </TouchableOpacity>
         </View>
+        <FlatList style={{height: '80%'}} data={state.listNotification} renderItem={_renderItem} keyExtractor={(item) => `${item.ID}`} />
       </View>
       <BottomTabNavigation
         componentId={props.componentId}

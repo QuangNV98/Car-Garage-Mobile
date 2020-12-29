@@ -1,5 +1,4 @@
 import {createActions} from 'redux-actions';
-import {IListData} from '../listCommitments/propState';
 
 const actions = createActions({
   SET_LOAD_COMMITMENT_ACTION: (loadList: boolean, pageNumber: number) => ({loadList, pageNumber}),
@@ -7,13 +6,11 @@ const actions = createActions({
   SET_LIST_COMMITMENT_ACTION: (
     countActive: number,
     countFinish: number,
-    listData: IListData[],
     pageNumber: number,
     loadList: boolean,
   ) => ({
     countActive,
     countFinish,
-    listData,
     pageNumber,
     loadList,
   }),
@@ -22,6 +19,7 @@ const actions = createActions({
   SET_LIST_PROGRESS_DETAIL_ACTION: (data) => ({data}),
   GET_DETAIL_CHECK_IN_ACTION: (commitment_id) => ({commitment_id}),
   SET_DETAIL_CHECK_IN_ACTION: (data) => ({data}),
+  UPDATE_FCM_TOKEN_ACTION: (ID, FCM_TOKEN) => ({ID, FCM_TOKEN}),
 });
 
 export const {
@@ -33,4 +31,5 @@ export const {
   setListProgressDetailAction,
   getDetailCheckInAction,
   setDetailCheckInAction,
+  updateFcmTokenAction,
 } = actions;
