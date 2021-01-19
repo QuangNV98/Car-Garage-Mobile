@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react';
 import {connect} from 'react-redux';
 import {colors, common} from '@src/styles';
-import {Text, TouchableOpacity, View, FlatList} from 'react-native';
+import {Text, TouchableOpacity, View} from 'react-native';
 import {Icon} from 'react-native-elements';
 import {IProps, IState} from './propState';
 import styles from './styles';

@@ -6,7 +6,7 @@ export const checkLogin = async (username: string, password: string) => {
       username,
       password,
     };
-    const response = await configServices.postService('authenticate', body, false);
+    const response = await configServices.postService('authenCustomer', body, false);
     return response;
   } catch (error) {
     throw error;

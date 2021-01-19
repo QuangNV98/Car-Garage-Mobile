@@ -7,13 +7,13 @@ import {Icon} from 'react-native-elements';
 import {IProps, IState} from './propState';
 import styles from './styles';
 import BottomTabNavigation from '@src/containers/components/bottomNavigation';
-import {APP_MY_FRIEND_SCREEN} from './navigation';
+import {APP_TRANSACTIONS_SCREEN} from './navigation';
 import {rootDetailBillScreen} from './detailBill/navigation';
 import { TabView, SceneMap ,TabBar} from "react-native-tab-view";
 import {getListTransactionsFixingAction, getListTransactionsCompletedAction, getListTransactionsGuaranteeAction} from './redux/actions';
 
 
-class MyFriendComponent extends React.Component<IProps> {
+class TransactionComponent extends React.Component<IProps> {
   state: IState = {
     status: false,
     tabView: {
@@ -57,22 +57,6 @@ class MyFriendComponent extends React.Component<IProps> {
             )}
           </View>
         </View>
-      </TouchableOpacity>
-    );
-  };
-
-  renderItemStatus = ({item}) => {
-    return (
-      <TouchableOpacity
-        key={item.name}
-        style={{
-          padding: 5,
-          backgroundColor: this.state.status == item.name ? colors.silverTree : 'white',
-          margin: 5,
-          borderColor: this.state.status == item.value ? colors.silverTree : '#333',
-          borderWidth: 1,
-        }}>
-        <Text style={{fontSize: 12, color: this.state.status == item.value ? 'white' : '#333'}}>{item.value}</Text>
       </TouchableOpacity>
     );
   };
@@ -132,7 +116,7 @@ class MyFriendComponent extends React.Component<IProps> {
         </View>
         <BottomTabNavigation
           componentId={this.props.componentId}
-          activeTab={APP_MY_FRIEND_SCREEN}
+          activeTab={APP_TRANSACTIONS_SCREEN}
           showAddCommitments={true}
         />
       </Fragment>
@@ -144,4 +128,4 @@ const mapStateToProps = (state) => ({fixingTrans: state.screens.transReducer.dat
 
 const mapDispatchToProps = (dispatch: Dispatch) => bindActionCreators({getListTransactionsFixingAction, getListTransactionsCompletedAction, getListTransactionsGuaranteeAction}, dispatch);
 
-export default connect(mapStateToProps, mapDispatchToProps)(MyFriendComponent);
+export default connect(mapStateToProps, mapDispatchToProps)(TransactionComponent);

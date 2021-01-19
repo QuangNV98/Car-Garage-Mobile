@@ -1,6 +1,5 @@
 import ButtonComponent from '@src/containers/components/button';
 import InputComponent from '@src/containers/components/input';
-import {rootNotificationScreen} from '@src/screens/notifications/navigation';
 import {colors, common} from '@src/styles';
 import {ms} from '@src/styles/scalingUtils';
 import {validation} from '@src/utils/index';
@@ -25,36 +24,32 @@ class LoginComponent extends React.Component<any> {
     disabledPass: true,
   };
   async componentDidMount() {
-    console.log('vao');
     this.checkPermission();
-    this.createNotificationListeners();
+    // this.createNotificationListeners();
   }
 
-  async createNotificationListeners() {
-    //Tạo channel
-    const channel = new firebase.notifications.Android.Channel(
-      'test-channel',
-      'Test Channel',
-      firebase.notifications.Android.Importance.Max,
-    ).setDescription('My apps test channel');
-    firebase.notifications().android.createChannel(channel);
+  // async createNotificationListeners() {
+  //   //Tạo channel
+  //   const channel = new firebase.notifications.Android.Channel(
+  //     'test-channel',
+  //     'Test Channel',
+  //     firebase.notifications.Android.Importance.Max,
+  //   ).setDescription('My apps test channel');
+  //   firebase.notifications().android.createChannel(channel);
 
-    //Vietnamese explain: khi đang ở foreground => show alert khi có noti
-    this.notificationListener = firebase.notifications().onNotification((noti) => {
-      const {title, body} = noti;
-      Alert.alert(title, body);
-    });
-  }
+  //   //Vietnamese explain: khi đang ở foreground => show alert khi có noti
+  //   this.notificationListener = firebase.notifications().onNotification((noti) => {
+  //     const {title, body} = noti;
+  //     Alert.alert(title, body);
+  //   });
+  // }
 
   async checkPermission() {
-    console.log('m');
     const enabled = true;
-    console.log(enabled, 'en');
     if (enabled) {
       const fcmToken = await firebase.messaging().getToken();
 
       if (fcmToken) {
-        console.log(fcmToken);
         // await Clipboard.setString(fcmToken)
       }
     } else {
@@ -75,11 +70,9 @@ class LoginComponent extends React.Component<any> {
   //Step 3: if has permission -> process get Token
   async getToken() {
     let fcmToken = await AsyncStorage.getItem('fcmToken');
-    console.log('token = ', fcmToken);
 
     if (!fcmToken) {
       fcmToken = await firebase.messaging().getToken();
-      console.log('token = ', fcmToken);
       if (fcmToken) {
         // user has a device token
         await AsyncStorage.setItem('fcmToken', fcmToken);
@@ -89,49 +82,12 @@ class LoginComponent extends React.Component<any> {
   validate = () => {
     let isValid = '';
     let controlFocus: TextInput = null;
-
-    // if (!this.state.password) {
-    //   isValid = 'All fields are required';
-    //   controlFocus = this.password;
-    // }
-    // if (!validation.validateEmail(this.state.email)) {
-    //   isValid = 'Please enter a valid email';
-    //   controlFocus = this.email;
-    // }
     return {isValid, controlFocus};
   };
 
   _login = async () => {
-    let config = {
-      apiKey: 'AIzaSyAFFEhrr0CDZ3zXnVNc9HAcdgQ4UBUQec4',
-      databaseURL: 'cargarage-297810.firebaseapp.com',
-      projectId: 'cargarage-297810',
-      storageBucket: 'cargarage-297810.appspot.com',
-      messagingSenderId: '509823215770',
-      appId: '1:509823215770:web:c4a84edb6698d818ac5723',
-    };
-    firebase.initializeApp(config, null);
-    // const {isValid, controlFocus} = this.validate();
-    // if (!isValid) {
     this.props.logInAction(this.state.email, this.state.password);
-    // const fcmToken = await firebase.messaging().getToken();
-
-    // if (fcmToken) {
-    //   console.log(fcmToken);
-    // }
-    // rootMyCommitmentScreen();
-
-    // } else {
-    //   Alert.alert('Error', isValid, [
-    //     {
-    //       text: 'OK',
-    //       onPress: () => (controlFocus ? controlFocus.focus() : null),
-    //     },
-    //   ]);
-    // }
   };
-
-  _goNoti = () => rootNotificationScreen();
 
   _onChangeText = (state: string) => (evt: any) => this.setState({[state]: evt});
 
@@ -153,7 +109,7 @@ class LoginComponent extends React.Component<any> {
             <InputComponent
               accessibilityLabel="email"
               ref={(input) => (this.email = input)}
-              leftIcon="ios-mail"
+              leftIcon="mail-outline"
               leftIconType="ionicon"
               autoCapitalize="none"
               placeholder="Email address"
@@ -163,7 +119,7 @@ class LoginComponent extends React.Component<any> {
             <InputComponent
               accessibilityLabel="password"
               ref={(input) => (this.password = input)}
-              leftIcon="eyes"
+              leftIcon="lock-closed-outline"
               leftIconType="ionicon"
               rightIcon={this.state.disabledPass ? 'ios-eye-off' : 'ios-eye'}
               rightIconType="ionicon"

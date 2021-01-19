@@ -15,7 +15,6 @@ import {rootLoginScreen} from '@src/screens/accounts/signin/navigation';
 import ButtonComponent from '@src/containers/components/button';
 import IconE from 'react-native-vector-icons/FontAwesome5';
 import firebase from 'react-native-firebase';
-import {updateFcmTokenAction} from './redux/actions';
 import {getNotification} from './services';
 import moment from 'moment';
 
@@ -27,7 +26,6 @@ export const MyCommitmentComponent: FC<any> = (props: any) => {
     account: state.account,
     listNotification: [],
     logOutAction: () => dispatch(logOutAction()),
-    updateFcmTokenAction: (ID, FCM_TOKEN) => dispatch(updateFcmTokenAction(ID, FCM_TOKEN)),
   }));
   const [state, setState] = useState<any>({
     showConfirmLogout: false,
@@ -64,12 +62,9 @@ export const MyCommitmentComponent: FC<any> = (props: any) => {
 
     const result = await getNotification(JSON.parse(user).ID);
     setState((state: IState) => ({...state, listNotification: result}));
-
-    console.log(result, 'e');
   };
 
   const _renderItem = ({item, index}) => {
-    console.log(item, 't');
     return (
       <>
         <TouchableOpacity style={styles.itemContainer}>
@@ -77,9 +72,7 @@ export const MyCommitmentComponent: FC<any> = (props: any) => {
             <Text style={styles.itemTextContent}>
               <Text style={styles.itemTextContentUser}>{item.BODY}</Text>
             </Text>
-            <Text style={styles.itemTime}>
-              {item.TIME}
-            </Text>
+            <Text style={styles.itemTime}>{item.TIME}</Text>
           </View>
         </TouchableOpacity>
       </>
@@ -100,7 +93,12 @@ export const MyCommitmentComponent: FC<any> = (props: any) => {
             <Icon name="sign-out" type="font-awesome" color={colors.silverTree} size={30} />
           </TouchableOpacity>
         </View>
-        <FlatList style={{height: '80%'}} data={state.listNotification} renderItem={_renderItem} keyExtractor={(item) => `${item.ID}`} />
+        <FlatList
+          style={{height: '80%'}}
+          data={state.listNotification}
+          renderItem={_renderItem}
+          keyExtractor={(item) => `${item.ID}`}
+        />
       </View>
       <BottomTabNavigation
         componentId={props.componentId}

@@ -1,19 +1,19 @@
 import {RootState} from '@src/boot/rootReducers';
 import {APP_MY_COMMITMENT_SCREEN, rootMyCommitmentScreen} from '@src/screens/myCommitment/navigation';
-import {APP_PROFILE_SCREEN, rootProfileScreen} from '@src/screens/rescue/navigation';
-import {APP_NOTIFICATION_SCREEN, rootNotificationScreen} from '@src/screens/notifications/navigation';
-import {APP_MY_FRIEND_SCREEN, rootMyFriendScreen} from '@src/screens/transactions/navigation';
+import {APP_SOS_SCREEN, rootSosScreen} from '@src/screens/rescue/navigation';
+import {APP_TRANSACTIONS_SCREEN, rootTransactionScreen} from '@src/screens/transactions/navigation';
 import {colors} from '@src/styles';
 import {ms} from '@src/styles/scalingUtils';
 import React, {Fragment, useState} from 'react';
-import {Alert, TouchableOpacity, Modal, Text, View} from 'react-native';
+import {TouchableOpacity, Modal, Text, View} from 'react-native';
 import BottomNavigation, {FullTab} from 'react-native-material-bottom-navigation';
 import {Icon} from 'react-native-elements';
 import {useSelector} from 'react-redux';
 import {IProps, IState} from './propState';
 import styles from './styles';
 import ButtonComponent from '@src/containers/components/button';
-import {myProfileUpdatePaymentScreen} from '@src/screens/rescue/payment/updatePayment';
+import {permission} from '@src/utils/index';
+import Geolocation, {GeolocationError, GeolocationResponse} from '@react-native-community/geolocation';
 
 export default function BottomTabNavigation(props: IProps) {
   props = useSelector<RootState, IProps>((state: RootState) => ({
@@ -34,22 +34,51 @@ export default function BottomTabNavigation(props: IProps) {
       onPress: () => rootMyCommitmentScreen(),
     },
     {
-      key: APP_MY_FRIEND_SCREEN,
+      key: APP_TRANSACTIONS_SCREEN,
       label: 'Transaction',
       barColor: colors.white,
       img: 'list',
-      onPress: () => rootMyFriendScreen(),
+      onPress: () => rootTransactionScreen(),
     },
     {
-      key: APP_PROFILE_SCREEN,
+      key: APP_SOS_SCREEN,
       label: 'S.O.S',
       barColor: colors.white,
       img: 'shield',
-      onPress: async() => {
-        rootProfileScreen()
+      onPress: async () => {
+        const checkPermission = await permission.permissionMap();
+        console.log(checkPermission, 'checkPermission');
+        if (checkPermission) {
+          const getLocation = await getCurrentPosition();
+          const region = {
+            latitude: getLocation.coords.latitude,
+            longitude: getLocation.coords.longitude,
+            latitudeDelta: 0.003,
+            longitudeDelta: 0.003,
+          };
+          console.log(region, 'r');
+          rootSosScreen({region});
+        }
       },
     },
   ];
+
+  const getCurrentPosition = () => {
+    try {
+      return new Promise(
+        (resolve: (position: GeolocationResponse) => void, reject: (error: GeolocationError) => void) => {
+          Geolocation.getCurrentPosition(resolve, reject, {
+            enableHighAccuracy: true,
+            timeout: 15000,
+            // maximumAge: 10000,
+          });
+        },
+      );
+    } catch (error) {
+      console.log(error, 'err');
+      throw error;
+    }
+  };
 
   const _toggleModal = () => {
     setState((state: IState) => ({
@@ -60,7 +89,6 @@ export default function BottomTabNavigation(props: IProps) {
 
   const _submitPaymentMethod = () => {
     _toggleModal();
-    myProfileUpdatePaymentScreen(props.componentId);
   };
 
   const _handleTabPress = (newTab: any) => newTab.onPress();

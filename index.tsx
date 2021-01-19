@@ -1,8 +1,6 @@
 import AsyncStorage from '@react-native-community/async-storage';
 import {System} from '@src/constant';
-import {setAccountAction} from '@src/containers/redux/account/actions';
 import {logOutAction} from '@src/containers/redux/common/actions';
-import {getAccountInfor} from '@src/containers/services';
 import {rootLoginScreen} from '@src/screens/accounts/signin/navigation';
 import {rootMyCommitmentScreen} from '@src/screens/myCommitment/navigation';
 import {typography} from '@src/utils/typography';
@@ -11,15 +9,13 @@ import {checkInternetConnection, offlineActionTypes} from 'react-native-offline'
 import {persistStore} from 'redux-persist';
 import configureStore from './src/boot/configureStore';
 import {registerScreens} from './src/registerScreens';
-import Mixpanel from 'react-native-mixpanel';
-import firebase from 'react-native-firebase';
 
 typography();
 
 const store = configureStore();
+console.disableYellowBox = true;
 
 registerScreens(store);
-Mixpanel.sharedInstanceWithToken('88401bf377af8b566a238cbb64b77580');
 
 Navigation.events().registerAppLaunchedListener(() => {
   persistStore(store, {}, () => {
@@ -31,8 +27,11 @@ Navigation.events().registerAppLaunchedListener(() => {
         });
 
         const token = await AsyncStorage.getItem(System.TOKEN);
-
-        rootLoginScreen();
+        if (!token) {
+          rootLoginScreen();
+        } else {
+          rootMyCommitmentScreen();
+        }
       } catch (error) {
         await store.dispatch(logOutAction());
         rootLoginScreen();

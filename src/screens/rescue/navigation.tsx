@@ -1,9 +1,9 @@
 import {colors} from '@src/styles';
 import {Navigation} from 'react-native-navigation';
 
-const APP_PROFILE_SCREEN = 'app.profile';
+const APP_SOS_SCREEN = 'app.sos';
 
-const rootProfileScreen = () => {
+const rootSosScreen = (passProps?: object) => {
   Navigation.setDefaultOptions({
     statusBar: {
       backgroundColor: colors.solitude,
@@ -17,14 +17,15 @@ const rootProfileScreen = () => {
         children: [
           {
             component: {
-              id: APP_PROFILE_SCREEN,
-              name: APP_PROFILE_SCREEN,
+              id: APP_SOS_SCREEN,
+              name: APP_SOS_SCREEN,
               options: {
                 topBar: {
                   visible: false,
                   height: 0,
                 },
               },
+              passProps,
             },
           },
         ],
@@ -33,4 +34,4 @@ const rootProfileScreen = () => {
   });
 };
 
-export {APP_PROFILE_SCREEN, rootProfileScreen};
+export {APP_SOS_SCREEN, rootSosScreen};

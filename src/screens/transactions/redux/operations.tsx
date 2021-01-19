@@ -12,9 +12,9 @@ function* getListTransactionsFixingWatcher() {
     try {
       yield put(onLoadingAction());
       const user = yield AsyncStorage.getItem(System.USER_INFO);
-      console.log("21")
+
       const result = yield call(getListTransactionsFixing, JSON.parse(user).ID);
-      console.log(result, "res")
+
       yield put(setListTransactionsFixingAction(result));
     } catch (error) {
       if (error.message === 'InvalidToken') {
@@ -33,9 +33,9 @@ function* getListTransactionsCompletedWatcher() {
     try {
       yield put(onLoadingAction());
       const user = yield AsyncStorage.getItem(System.USER_INFO);
-      console.log("21")
+
       const result = yield call(getListTransactionsCompleted, JSON.parse(user).ID);
-      console.log(result, "res")
+
       yield put(setListTransactionsCompletedAction(result));
     } catch (error) {
       if (error.message === 'InvalidToken') {
@@ -54,9 +54,9 @@ function* getListTransactionsGuaranteeWatcher() {
     try {
       yield put(onLoadingAction());
       const user = yield AsyncStorage.getItem(System.USER_INFO);
-      console.log("21")
+
       const result = yield call(getListTransactionsGuarantee, JSON.parse(user).ID);
-      console.log(result, "res")
+
       yield put(setListTransactionsGuaranteeAction(result));
     } catch (error) {
       if (error.message === 'InvalidToken') {

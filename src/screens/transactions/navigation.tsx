@@ -1,16 +1,16 @@
 import {Navigation} from 'react-native-navigation';
 
-const APP_MY_FRIEND_SCREEN = 'app.my_friend';
+const APP_TRANSACTIONS_SCREEN = 'app.transactions';
 
-const rootMyFriendScreen = () => {
+const rootTransactionScreen = () => {
   Navigation.setRoot({
     root: {
       stack: {
         children: [
           {
             component: {
-              id: APP_MY_FRIEND_SCREEN,
-              name: APP_MY_FRIEND_SCREEN,
+              id: APP_TRANSACTIONS_SCREEN,
+              name: APP_TRANSACTIONS_SCREEN,
               options: {
                 topBar: {
                   visible: false,
@@ -25,4 +25,4 @@ const rootMyFriendScreen = () => {
   });
 };
 
-export {APP_MY_FRIEND_SCREEN, rootMyFriendScreen};
+export {APP_TRANSACTIONS_SCREEN, rootTransactionScreen};

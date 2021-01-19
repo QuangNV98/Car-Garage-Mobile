@@ -35,6 +35,8 @@ const permissionMap = async () => {
     }
   } else {
     const checkLocationAndroid = await check(PERMISSIONS.ANDROID.ACCESS_FINE_LOCATION);
+    console.log(checkLocationAndroid, "checkLocationAndroid")
+
     switch (checkLocationAndroid) {
       case RESULTS.GRANTED:
         return true;

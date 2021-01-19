@@ -12,6 +12,7 @@ const getCurrentPosition = () => {
       },
     );
   } catch (error) {
+    console.log(error, "err")
     throw error;
   }
 };
